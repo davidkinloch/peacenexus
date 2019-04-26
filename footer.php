@@ -23,25 +23,21 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer>  
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url')?>/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+   <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="<?php bloginfo('template_url')?>/js/build/production.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139146792-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-     
-
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url')?>/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-
-         <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        
-        <script src="<?php bloginfo('template_url')?>/js/build/production.min.js"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139146792-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-139146792-1');
-        </script>
-    </body>
+    gtag('config', 'UA-139146792-1');
+  </script>
+  <?php wp_footer(); ?> 
+  </body>
 </html>
