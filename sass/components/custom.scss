@@ -339,6 +339,13 @@ nav {
   }
 }
 
+nav {
+  background: transparent;
+  a {
+    color: $primary-color;
+  }
+}
+
 @media #{$large-and-up} {
   nav {
     margin: 0 auto;
