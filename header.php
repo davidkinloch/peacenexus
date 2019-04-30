@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>PeaceNexus Templates</title>
+        <title>PeaceNexus</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_url')?>/apple-touch-icon.png">
@@ -20,6 +20,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url')?>/css/materialize.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url')?>/css/print.css"  media="print"/>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
@@ -27,7 +28,7 @@
           <nav role="navigation">
             <div class="nav-wrapper container">
               <a id="logo-container" href="/" class="brand-logo"><img src="<?php bloginfo('template_url')?>/assets/src/LogoPN10.svg" alt=""></a>
-              <ul class="main-nav right hide-on-med-and-down">
+              <ul class="main-nav right hide-on-med-and-down no-print">
                 <?php  wp_nav_menu_no_ul(); ?>
                 <li class="item-search">
                     <form>
@@ -53,9 +54,9 @@
                   <li class="right"><a href="proposals.php" class="btn btn-large btn-tertiary waves-effect waves-light">Call For Proposals</a></li>
               </ul>
 
-             <div class="callout">Open in January 2020</div>
+             <div class="callout no-print">Open in January 2020</div>
 
-              <ul id="nav-mobile" class="sidenav">
+              <ul id="nav-mobile" class="sidenav no-print">
                   <?php  wp_nav_menu_no_ul(); ?>
                   <li class="sidenav-search">
                     <form>
@@ -80,7 +81,7 @@
                   </li>
                   <li><a href="proposals.php" class="btn btn-tertiary waves-effect waves-light">Call For Proposals</a></li>
                 </ul>
-              <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <a href="#" data-target="nav-mobile" class="sidenav-trigger no-print"><i class="material-icons">menu</i></a>
             </div>
           </nav>
           <?php include 'content/content_notifcation.php'; ?>

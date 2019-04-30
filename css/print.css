@@ -1,0 +1,11 @@
+@media print {    
+  .nav .brand-logo {
+    width: 25%;
+    img {
+      max-width: 250px;
+    }
+  }
+  .no-print, .no-print *, iframe {
+      display: none !important;
+  }
+}

@@ -565,7 +565,9 @@ nav {
   .card {
     background: #E1E1E1;
     @media #{$extra-large-and-up} {
-      padding: 120px 0 30px;
+      .card-link {
+        padding: 120px 0 30px;
+      }
     }
     .card-content {
       .card-title {
@@ -892,6 +894,9 @@ nav {
 }
 
 .post-type-archive-regions, .single-regions {
+  .countries {
+    padding: 0 .75rem;
+  }    
   #menu-item-167 a {
     @media #{$large-and-up} {
       border-color: $primary-color;
@@ -906,3 +911,5 @@ nav {
     }
   }
 }
+
+
