@@ -19,11 +19,13 @@
     <?php while (have_posts()) : the_post(); ?>
       <div class="col s6 xl2 ">
         <div class="card">
-          <div class="card-content">
-            <h3 class="card-title"><?php the_title();?></h3>
-            <p><?php the_field('leading_paragraph');?></p>
-            <a class="btn btn-transparent waves-effect waves-light" href="<?php the_permalink();?>">Learn More</a>
-          </div>
+          <a class="card-link waves-effect waves-light" href="<?php the_permalink();?>">
+            <div class="card-content">
+              <h3 class="card-title"><?php the_title();?></h3>
+              <p><?php the_field('leading_paragraph');?></p>
+              <span class="btn btn-transparent waves-effect waves-light">Learn More</span>
+            </div>
+          </a>
         </div>
       </div>
    <?php endwhile; ?> 

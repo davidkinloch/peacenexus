@@ -19,12 +19,14 @@
     <div class="row">
       <?php $postCount = 1; while (have_posts()) : $postCount++;  the_post(); ?>
         <div class="col s6 l4 <?php if($postCount == 4) { ?>offset-s3<?php } ?>">
-          <div class="card">
-            <div class="card-content">
-              <h3 class="card-title"><?php the_title();?></h3>
-              <p><?php the_field('leading_paragraph');?></p>
-              <a class="btn btn-transparent waves-effect waves-light" href="<?php the_permalink();?>">Learn More</a>
-            </div>
+          <div class="card waves-effect waves-light">
+            <a class="card-link waves-effect waves-light" href="<?php the_permalink();?>"> 
+              <div class="card-content">
+                <h3 class="card-title"><?php the_title();?></h3>
+                <p><?php the_field('leading_paragraph');?></p>
+                <span class="btn btn-transparent waves-effect waves-light">Learn More</span>
+              </div>
+            </a>
           </div>
         </div>
      <?php endwhile; ?> 

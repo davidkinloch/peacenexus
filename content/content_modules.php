@@ -28,46 +28,52 @@
           <div class="row">
             <div class="col s12 m6 l4">
               <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img src="<?php echo get_the_post_thumbnail_url($post_id_1) ;?>" class="responsive-img"  alt="<?php echo get_the_title($post_id_1); ?>">
-                  <div class="card-content">
-                    <h3 class="small"><?php echo get_the_title($post_id_1); ?></h3>
-                    <p><?php echo get_field('leading_paragraph', $post_id_1); ?></p>
-                    <a href="<?php echo get_the_permalink($post_id_1); ?>">READ MORE</a>
-                  </div>
+                <div class="card-image">
+                  <a class="card-link waves-effect waves-block waves-light" href="<?php echo get_the_permalink($post_id_1); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url($post_id_1) ;?>" class="responsive-img"  alt="<?php echo get_the_title($post_id_1); ?>">
+                    <div class="card-content">
+                      <h3 class="small"><?php echo get_the_title($post_id_1); ?></h3>
+                      <p><?php echo get_field('leading_paragraph', $post_id_1); ?></p>
+                      <span class="card-more">READ MORE</span>
+                    </div>
+                  </a>
                 </div>
                 <div class="card-action">
-                  <?php include 'content/content_categories.php'; ?>
+                  <?php include 'content_categories.php'; ?>
                 </div>
               </div>
             </div>
             <div class="col s12 m6 l4">
               <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img src="<?php echo get_the_post_thumbnail_url($post_id_2) ;?>" class="responsive-img"  alt="<?php echo get_the_title($post_id_2); ?>">
-                  <div class="card-content">
-                    <h3 class="small"><?php echo get_the_title($post_id_2); ?></h3>
-                    <p><?php echo get_field('leading_paragraph', $post_id_2); ?></p>
-                    <a href="<?php echo get_the_permalink($post_id_2); ?>">READ MORE</a>
-                  </div>
+                <div class="card-image">
+                  <a class="card-link waves-effect waves-block waves-light"  href="<?php echo get_the_permalink($post_id_2); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url($post_id_2) ;?>" class="responsive-img"  alt="<?php echo get_the_title($post_id_2); ?>">
+                    <div class="card-content">
+                      <h3 class="small"><?php echo get_the_title($post_id_2); ?></h3>
+                      <p><?php echo get_field('leading_paragraph', $post_id_2); ?></p>
+                      <span class="card-more">READ MORE</span>
+                    </div>
+                  </a>
                 </div>
                 <div class="card-action">
-                  <?php include 'content/content_categories.php'; ?>
+                  <?php include 'content_categories.php'; ?>
                 </div>
               </div>
             </div>
             <div class="col s12 m6 l4 offset-m3">
               <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                  <img src="<?php echo get_the_post_thumbnail_url($post_id_3) ;?>" class="responsive-img"  alt="<?php echo get_the_title($post_id_3); ?>">
-                  <div class="card-content">
-                    <h3 class="small"><?php echo get_the_title($post_id_3); ?></h3>
-                    <p><?php echo get_field('leading_paragraph', $post_id_3); ?></p>
-                    <a href="<?php echo get_the_permalink($post_id_3); ?>">READ MORE</a>
-                  </div>
+                  <a class="card-link waves-effect waves-block waves-light"  href="<?php echo get_the_permalink($post_id_3); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url($post_id_3) ;?>" class="responsive-img"  alt="<?php echo get_the_title($post_id_3); ?>">
+                    <div class="card-content">
+                      <h3 class="small"><?php echo get_the_title($post_id_3); ?></h3>
+                      <p><?php echo get_field('leading_paragraph', $post_id_3); ?></p>
+                      <span class="card-more">READ MORE</span>
+                    </div>
+                  </a>
                 </div>
                 <div class="card-action">
-                  <?php include 'content/content_categories.php'; ?>
+                  <?php include 'content_categories.php'; ?>
                 </div>
               </div>
             </div>
@@ -149,9 +155,7 @@
       </div>
 
 
-      <?php elseif( get_row_layout() == 'grid' ): 
-        $embed_code = get_sub_field('video_embed_code');
-      ?>
+      <?php elseif( get_row_layout() == 'grid' ): ?>
         <!-- Rollover Blocks -->
         <div class="section jigsaw">
           <div class="row">

@@ -299,8 +299,13 @@ nav {
     @media #{$extra-large-and-up} {
       padding-top: 55px;
     }
+    .current-menu-item {  
+      a {
+        border-color: $primary-color;
+      }
+    }
     a {
-      height: 50px;
+      height: 44px;
       margin:  0 6px;
       padding: 0;
       border-bottom: transparent 4px solid; 
@@ -316,7 +321,6 @@ nav {
       &:hover {
         border-color: $primary-color;
       }
-
     }
   }
   .callout {
@@ -459,6 +463,7 @@ nav {
   a {
     margin: 0 12px 12px 0;
     &.btn-filter {
+      box-shadow: none;
       @media #{$large-and-up} {
         margin-top: -12px;
       }
@@ -483,6 +488,9 @@ nav {
 
 .card {
   box-shadow: none;
+  &-link {
+    display: block;
+  }
 }
 
 .jigsaw {
@@ -598,6 +606,12 @@ nav {
       margin-bottom: 10px;
       font-size: 1.067rem;
       line-height: 1.5;
+      color: #666;
+    }
+    .card-more {
+      border-bottom: 1px solid $primary-color;
+      text-transform: uppercase;
+      font-size: 0.9333rem;
     }
     a {
       border-bottom: 1px solid $primary-color;
@@ -869,5 +883,21 @@ nav {
 .teamgrid {
   .small {
     margin-bottom: 12px;
+  }
+}
+
+.post-type-archive-regions, .single-regions {
+  #menu-item-167 a {
+    @media #{$large-and-up} {
+      border-color: $primary-color;
+    }
+  }
+}
+
+.post-type-archive-services, .single-services {
+  #menu-item-106 a {
+    @media #{$large-and-up} {
+      border-color: $primary-color;
+    }
   }
 }

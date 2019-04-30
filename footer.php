@@ -12,7 +12,7 @@
            <?php $defaults = array( 'theme_location'  => 'footer-links-left', 'container' => 'ul' ); wp_nav_menu( $defaults );?>  
         </div>
       </div>
-      <a href="https://www.leidar.co.uk/" target="_blank" class="builtby">Website By Leidar</a>
+      <a href="https://www.leidar.com" target="_blank" class="builtby">Website by Leidar</a>
     </div>
     <div class="footer-copyright">
       <div class="container">
