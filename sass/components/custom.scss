@@ -239,39 +239,6 @@ h1 {
   }
 }
 
-
-
-.topbanner {
-  position: relative;
-  padding: 30px 30px 25px;
-  .brand-logo {
-    img {
-      width: 104px;
-      height: 64px;
-      padding-top:0;
-    }
-  }
-  &-menu {
-    position: absolute;
-    top: 52px;
-    right: 32px;
-    height: 38px;
-    margin: 0;
-    li {
-      display: inline-block;
-    }
-  }
-  &-switcher, &-search {
-    margin-right: 16px;
-  }
-  &-cta a {
-    margin-top: -12px;
-  }
-  .input-field {
-    margin: 0;
-  }
-}
-
 .cta-block {
   padding: 0 .75em;
   .banner & {
@@ -370,15 +337,15 @@ nav {
       font-weight: bold;
     }
     .brand-logo {
-      padding: 11px 0 0;
+      padding: 0;
       @media #{$extra-large-and-up} {
-        padding: 23.5px 0 0;
+        padding-top: 23px;
       }
       img {
-        height: 60px;
+        height: 80px;
         @media #{$extra-large-and-up} {
-          width: 163.72px;
-          height: 100px;
+          height: 123px;
+          padding: 0;
         }
       }
     }
