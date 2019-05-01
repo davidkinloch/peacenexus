@@ -51,8 +51,7 @@
               </div>
             </div>
             <div class="card-action">
-              <a class="btn btn-secondary waves-effect waves-light" href="#">Central Asia</a>
-              <a class="btn waves-effect waves-light" href="#">Organisational development</a>
+              <?php include 'content/content_categories.php'; ?>
             </div>
           </div>
         </div>
