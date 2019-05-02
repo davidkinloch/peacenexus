@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+<?php get_header(
+/*
+Template Name: Calls For Proposal
+*/
+); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <div class="section banner banner-text" id="proposals-banner" >
   <div class="container">
@@ -10,10 +15,10 @@
     </div>
     <div class="row">
       <div class="col s12 m6">
-        <h1>Calls for Proposals</h1>
+        <h1><?php the_title(); ?></h1>
       </div>
       <div class="col s12 m6">
-        <h2>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia consectetur adipisicing elit</h2>
+        <h2><?php echo $leading_paragraph ?></h2>
       </div>
     </div>
   </div>
@@ -39,7 +44,7 @@
         <li class="tab col s3">
           <a href="#focus-3">
             <span>Step Three</span>
-            <h3>3. When &amp; how to apply</h3>
+            <h3>3. How to Prepare</h3>
           </a>
         </li>
         <li class="tab col s3">
@@ -50,75 +55,72 @@
         </li>
       </ul>
     </div>
+
+    <?php
+
+    if( have_rows('step_1') ):
+
+      while( have_rows('step_1') ): the_row();
+
+        $og = get_sub_field('organisational_development');
+        $cs = get_sub_field('conflict_sensitivity');
+        $id = get_sub_field('inclusive_dialogue');
+    ?>
+
     <div class="row tab-content">
       <div id="focus-1" class="col s12">
         <div class="row">
           <div class="col s12 m4">
-            <h4>Organisational Development</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="link">Lorem ipsum dolor sit amet</a>
-            <a href="#" class="btn btn-transparent btn-large">Consectetur</a>
+            <?php echo $og['text']; ?>
+            <a href="<?php echo $og['cta_link']; ?>" class="btn btn-transparent btn-large"><?php echo $og['cta_label']; ?></a>
           </div>
           <div class="col s12 m4">
-            <h4>Conflict Sensitivity</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="link">Lorem ipsum dolor sit amet</a>
-            <a href="#" class="btn btn-transparent btn-large">Consectetur</a>
+            <?php echo $cs['text']; ?>
+            <a href="<?php echo $cs['cta_link']; ?>" class="btn btn-transparent btn-large"><?php echo $cs['cta_label']; ?></a>
           </div>
           <div class="col s12 m4">
-            <h4>Inclusive Dialogue with Business</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="link">Lorem ipsum dolor sit amet</a>
-            <a href="#" class="btn btn-transparent btn-large">Consectetur</a>
+            <?php echo $id['text']; ?>
+            <a href="<?php echo $id['cta_link']; ?>" class="btn btn-transparent btn-large"><?php echo $id['cta_label']; ?></a>
           </div>
         </div>
       </div>
+    
+      <?php endwhile; endif; ?>
+      
+      <?php
+        $step_2 = get_field('step_2');
+        $step_3 = get_field('step_3');
+      ?>
       <div id="focus-2" class="col s12">
         <div class="row">
-         <div class="col s12 m6 l4 offset-l3">
-            <h3>Organisational Development</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="link">Lorem ipsum dolor sit amet</a>
-            <a href="#" class="btn btn-flat">Consectetur</a>
-          </div>
-          <div class="col s12 m6 l5">
-            <h3>Conflict Sensitivity</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="link">Lorem ipsum dolor sit amet</a>
-            <a href="#" class="btn btn-flat">Consectetur</a>
+         <div class="col s12 m6 l6 offset-l3">
+            <?php echo $step_2['main_text']; ?>
           </div>
         </div>
       </div>
+
       <div id="focus-3" class="col s12">
         <div class="row"> 
-         <div class="col s12 l3 offset-l3">
-            <h3>Organisational Development</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="link">Lorem ipsum dolor sit amet</a>
-            <a href="#" class="btn btn-flat">Consectetur</a>
-          </div>
-          <div class="col s12 l3">
-            <h3>Conflict Sensitivity</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="link">Lorem ipsum dolor sit amet</a>
-            <a href="#" class="btn btn-flat">Consectetur</a>
-          </div>
-          <div class="col s12 l3">
-            <h3>Inclusive Dialogue with Business</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="link">Lorem ipsum dolor sit amet</a>
-            <a href="#" class="btn btn-flat">Consectetur</a>
+         <div class="col s12 m6 l6 offset-l3">
+            <?php echo $step_3['main_text']; ?>
           </div>
         </div>
       </div>
+
+      <?php
+      if( have_rows('step_4') ):
+
+        while( have_rows('step_4') ): the_row();
+
+          $main_text = get_sub_field('main_text');
+          $og = get_sub_field('organisational_development');
+          $cs = get_sub_field('conflict_sensitivity');
+          $id = get_sub_field('inclusive_dialogue');
+      ?>
       <div id="focus-4" class="col s12">
         <div class="row">
           <div class="col s12 l6">
-            <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia consectetur adipisicing elit.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <?php echo $main_text; ?>
           </div>
 
           <div class="col s12 l6">
@@ -126,78 +128,31 @@
               <div class="col s12">
                   <h5>Organisational Development</h5>
                   <div class="cta-block">
-                    <a href="#" class="btn btn-transparent waves-effect waves-light">Concept Note &amp; FAQs</a>
-                    <a href="#" class="btn  waves-effect waves-light">Apply Here</a>
+                    <a href="<?php echo $og['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $og['cta_label_2']; ?></a>
+                    <a href="<?php echo $og['cta_link']; ?>" class="btn  waves-effect waves-light"><?php echo $og['cta_label']; ?></a>
                   </div>
                   <h5>Conflict Sensitivity</h5>
                   <div class="cta-block">
-                    <a href="#" class="btn btn-transparent waves-effect waves-light">Concept Note &amp; FAQs</a>
-                    <a href="#" class="btn  waves-effect waves-light">Apply Here</a>
+                    <a href="<?php echo $cs['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $cs['cta_label_2']; ?></a>
+                    <a href="<?php echo $cs['cta_link']; ?>" class="btn  waves-effect waves-light"><?php echo $cs['cta_label']; ?></a>
                   </div>
                   <h5>Inclusive Dialogue with Business</h5>
                   <div class="cta-block">
-                    <a href="#" class="btn btn-transparent waves-effect waves-light">Concept Note &amp; FAQs</a>
-                    <a href="#" class="btn  waves-effect waves-light">Apply Here</a>
+                    <a href="<?php echo $id['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $id['cta_label_2']; ?></a>
+                    <a href="<?php echo $id['cta_link']; ?>" class="btn  waves-effect waves-light"><?php echo $id['cta_label']; ?></a>
                   </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <?php endwhile; endif; ?>
+
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="section decked">
-    <div class="row">
-      <div class="col s12 m6 l4">
-        <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img src="https://dummyimage.com/455x429/ccc/333.jpg" class="responsive-img"  alt="">
-            <div class="card-content">
-              <p> Excepteur sint occaecat cupidatat non proident sunt in culpa.</p>
-              <a href="#">READ MORE</a>
-            </div>
-          </div>
-          <div class="card-action">
-            <a class="btn btn-secondary waves-effect waves-light" href="#">Central Asia</a>
-            <a class="btn waves-effect waves-light" href="#">Organisational development</a>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m6 l4">
-        <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img src="https://dummyimage.com/455x429/ccc/333.jpg" class="responsive-img"  alt="">
-            <div class="card-content">
-              <p> Excepteur sint occaecat cupidatat non proident sunt in culpa.</p>
-              <a href="#">READ MORE</a>
-            </div>
-          </div>
-          <div class="card-action">
-            <a class="btn btn-secondary waves-effect waves-light" href="#">Central Asia</a>
-            <a class="btn waves-effect waves-light" href="#">Organisational development</a>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m6 l4 offset-m3">
-        <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img src="https://dummyimage.com/455x429/ccc/333.jpg" class="responsive-img"  alt="">
-            <div class="card-content">
-              <p> Excepteur sint occaecat cupidatat non proident sunt in culpa.</p>
-              <a href="#">READ MORE</a>
-            </div>
-          </div>
-          <div class="card-action">
-            <a class="btn btn-secondary waves-effect waves-light" href="#">Central Asia</a>
-            <a class="btn waves-effect waves-light" href="#">Organisational development</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<?php include 'content/content_modules.php'; ?>
 
-<?php include 'footer.php'; ?>
+<?php endwhile; endif; ?>
+<?php get_footer(); ?>

@@ -29,7 +29,7 @@
             <div class="nav-wrapper container">
               <a id="logo-container" href="/" class="brand-logo"><img src="<?php bloginfo('template_url')?>/assets/src/LogoPN10.svg" alt=""></a>
               <ul class="main-nav right hide-on-med-and-down no-print">
-                <?php  wp_nav_menu_no_ul(); ?>
+                <?php wp_nav_menu_no_ul(); ?>
                 <li class="item-search">
                     <form>
                       <div class="input-field">
@@ -51,7 +51,7 @@
                       </div>
                     </form>
                   </li>
-                  <li class="right"><a href="proposals.php" class="btn btn-large btn-tertiary waves-effect waves-light">Call For Proposals</a></li>
+                  <li class="right"><a href="/call-for-proposals" class="btn btn-large btn-tertiary waves-effect waves-light">Call For Proposals</a></li>
               </ul>
 
              <div class="callout no-print">Open in January 2020</div>
@@ -79,7 +79,7 @@
                       </div>
                     </form>
                   </li>
-                  <li><a href="proposals.php" class="btn btn-tertiary waves-effect waves-light">Call For Proposals</a></li>
+                  <li><a href="/call-for-proposals" class="btn btn-tertiary waves-effect waves-light">Call For Proposals</a></li>
                 </ul>
               <a href="#" data-target="nav-mobile" class="sidenav-trigger no-print"><i class="material-icons">menu</i></a>
             </div>
