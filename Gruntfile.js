@@ -8,6 +8,7 @@ module.exports = function(grunt) {
             // 2. Configuration for concatinating files goes here.
             dist: {
                 src: [
+                    'js/vendor/rellax.min.js',
                     'js/main.js'  // This specific file
                 
                 ],

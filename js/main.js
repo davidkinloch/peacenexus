@@ -18,6 +18,9 @@
      $('.item-search .search-close').click(function() {
        $( ".item-search .input-field" ).removeClass('active');
       });
+
+     var rellax = new Rellax('.rellax');
+     
   }); // end of document ready
 
 /*

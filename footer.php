@@ -23,7 +23,8 @@
         </div>
       </div>
     </div>
-  </footer>  
+  </footer>
+</div><!-- wnd mega wrap-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url')?>/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
    <!-- Compiled and minified JavaScript -->

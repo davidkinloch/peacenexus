@@ -19,6 +19,7 @@
   </div>
 </div>
 
+<div class="megawrap">
 <div class="container">
   <div class="section tabs-focus">
     <div class="row">

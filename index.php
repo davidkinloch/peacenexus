@@ -10,7 +10,7 @@
     </div>
   </div>
 </div>
-
+<div class="megawrap">
 <div class="container">
   <div class="section filter">
     <div class="row filter-btns">

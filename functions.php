@@ -160,22 +160,7 @@ remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
 
-function my_init()   
-{  
-    if (!is_admin())   
-    {  
-        wp_deregister_script('jquery');  
-  
-        // Load a copy of jQuery from the Google API CDN  
-        // The last parameter set to TRUE states that it should be loaded  
-        // in the footer.  
-        wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', FALSE, '1.11.0', TRUE);  
-        
-        wp_enqueue_script('jquery');  
-        wp_enqueue_script( 'production.min', get_template_directory_uri() . '/js/build/production.min.js', array(), '1.0.0', true );
-    }  
-}  
-add_action('init', 'my_init');
+
 
 //disable admin bar
 //add_filter('show_admin_bar', '__return_false');

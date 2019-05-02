@@ -1,5 +1,10 @@
 html {
   color: #666666;
+  height: 100%;
+}
+
+body {
+  height: 100%;
 }
 
 strong {
@@ -793,6 +798,7 @@ nav {
 }
 
 .page-footer {
+  position: relative;
   padding: 56px 0 0;
   .container {
     position: relative;
@@ -879,4 +885,15 @@ nav {
   }
 }
 
+.no-margin {
+  margin-bottom: 0;
+}
+
+.megawrap.rellax > .container {
+  background: #FFF;
+  padding-top: 20px;
+  @media #{$medium-and-up} {
+    padding-top: 70px;
+  }
+}
 

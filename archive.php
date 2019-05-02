@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<div class="megawrap">
 <?php if (have_posts()) : ?>
 <div class="section banner banner-text" id="highlights-banner" >
   <div class="container">

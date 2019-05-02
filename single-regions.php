@@ -30,6 +30,7 @@
         </div>
       </div>
 
+    <div class="megawrap">
       <?php include 'content/content_modules.php'; ?>
 
   <?php endwhile; endif; ?>

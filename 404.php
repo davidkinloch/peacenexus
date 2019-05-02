@@ -10,6 +10,7 @@
       </div>
     </div>
     
+  <div class="megawrap">
     <div class="container">
       <div class="section">
         <div class="row">

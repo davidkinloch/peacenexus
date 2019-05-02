@@ -25,6 +25,8 @@
       </div>
     </div>
     <?php include 'content/content_banner.php'; ?>
+
+    <div class="megawrap rellax" data-rellax-speed="9" data-rellax-zindex="1">
     <?php include 'content/content_modules.php'; ?>
 
   <?php endwhile; endif; ?>

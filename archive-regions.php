@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <?php if (have_posts()) : ?>
+
 <div class="section banner banner-text" id="region-banner" >
   <div class="container">
     <div class="row">
@@ -14,6 +15,7 @@
   </div>
 </div>
 
+<div class="megawrap">
 <div class="section countries">
   <div class="row">
     <?php while (have_posts()) : the_post(); ?>

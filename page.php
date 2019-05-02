@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
   <?php if (have_posts()) : while (have_posts()) : the_post(); 
     $leading_paragraph = get_field('leading_paragraph');
   ?>
@@ -15,6 +16,8 @@
       </div>
     </div>
     
+    <div class="megawrap">
+      
     <div class="container">
       <div class="section">
         <div class="row">
