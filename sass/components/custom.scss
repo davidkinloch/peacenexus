@@ -893,6 +893,12 @@ nav {
   background: #FFF;
   padding-top: 20px;
   @media #{$medium-and-up} {
+    //padding-top: 70px;
+  }
+}
+
+.home .megawrap.rellax > .container {
+   @media #{$medium-and-up} {
     padding-top: 70px;
   }
 }

@@ -42,13 +42,15 @@
       <?php while (have_posts()) : the_post(); ?>
         <div class="col s6 l4">
           <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="responsive-img"  alt="<?php the_title(); ?>">
-              <div class="card-content">
-                <h3 class="small"><?php the_title(); ?></h3>
-                <p><?php the_field('leading_paragraph'); ?></p>
-                <a href="<?php the_permalink(); ?>">READ MORE</a>
-              </div>
+            <div class="card-image">
+              <a class="card-link waves-effect waves-block waves-light" href="<?php the_permalink(); ?>">
+                <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="responsive-img"  alt="<?php the_title(); ?>">
+                <div class="card-content">
+                  <h3 class="small"><?php the_title(); ?></h3>
+                  <p><?php the_field('leading_paragraph'); ?></p>
+                  <span class="card-more">READ MORE</span>
+                </div>
+              </a>
             </div>
             <div class="card-action">
               <?php include 'content/content_categories.php'; ?>

@@ -15,7 +15,7 @@
     </div>
   </div>
 </div>
-<div class="megawrap rellax"  data-rellax-speed="9" data-rellax-zindex="1">
+<div class="megawrap rellax" data-rellax-speed="9" data-rellax-zindex="1">
 <div class="container">
   <?php include 'content/content_modules.php'; ?>
 </div><!-- end of container -->
