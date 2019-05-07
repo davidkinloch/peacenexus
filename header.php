@@ -31,10 +31,37 @@
               <ul class="main-nav right hide-on-med-and-down no-print">
                 <?php wp_nav_menu_no_ul(); ?>
                 <li class="item-search">
-                    <form>
+                  <form action="/" method="get">
+                    <div class="input-field">
+                      <input type="search" name="s" id="search" value="<?php the_search_query(); ?>"  required>
+                      <label class="label-icon" for="search"><i class="material-icons material-icons--search">search</i></label>
+                      <i class="material-icons search-close">close</i>
+                    </div>
+                  </form>
+                </li>
+                <li class="lang-switch">
+                  <form>
+                    <div class="input-field">
+                      <select>
+                        <option value="/" selected="">EN</option>
+                        <option value="#">FR</option>
+                        <option value="#">RU</option>
+                      </select>
+                    </div>
+                  </form>
+                </li>
+                <li class="right"><a href="/call-for-proposals" class="btn btn-large btn-tertiary waves-effect waves-light">Call For Proposals</a></li>
+              </ul>
+
+             <div class="callout no-print">Open in January 2020</div>
+
+              <ul id="nav-mobile" class="sidenav no-print">
+                  <?php  wp_nav_menu_no_ul(); ?>
+                  <li class="sidenav-search">
+                    <form action="/" method="get">
                       <div class="input-field">
-                        <input id="search" type="search" placeholder="Search" required>
-                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <input type="search" name="s" id="search" value="<?php the_search_query(); ?>"  required>
+                        <label class="label-icon" for="search"><i class="material-icons material-icons--search">search</i></label>
                         <i class="material-icons search-close">close</i>
                       </div>
                     </form>
@@ -43,37 +70,9 @@
                     <form>
                       <div class="input-field">
                         <select>
-                          <option value="1" selected="">EN</option>
-                          <option value="2">FR</option>
-                          <option value="3">RU</option>
-                        </select>
-                        
-                      </div>
-                    </form>
-                  </li>
-                  <li class="right"><a href="/call-for-proposals" class="btn btn-large btn-tertiary waves-effect waves-light">Call For Proposals</a></li>
-              </ul>
-
-             <div class="callout no-print">Open in January 2020</div>
-
-              <ul id="nav-mobile" class="sidenav no-print">
-                  <?php  wp_nav_menu_no_ul(); ?>
-                  <li class="sidenav-search">
-                    <form>
-                      <div class="input-field">
-                        <input id="search-side" type="search" placeholder="Search" required>
-                        <label class="label-icon" for="search-side"><i class="material-icons">search</i></label>
-                        <i class="material-icons">close</i>
-                      </div>
-                    </form>
-                  </li>
-                  <li class="lang-switch">
-                    <form>
-                      <div class="input-field">
-                        <select>
-                          <option value="1" selected="">EN</option>
-                          <option value="2">FR</option>
-                          <option value="3">RU</option>
+                          <option value="/" selected="">EN</option>
+                          <option value="#">FR</option>
+                          <option value="#">RU</option>
                         </select>
                         
                       </div>
