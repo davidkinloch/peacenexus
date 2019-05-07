@@ -7,18 +7,13 @@ Template Name: Calls For Proposal
 
 <div class="section banner banner-text" id="proposals-banner" >
   <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <a href="#!" class="breadcrumb">CALLS FOR PROPOSALS</a>
-        <a href="#!" class="breadcrumb">Focus Areas</a>
-      </div>
-    </div>
+    
     <div class="row">
       <div class="col s12 m6">
         <h1><?php the_title(); ?></h1>
       </div>
       <div class="col s12 m6">
-        <h2><?php echo $leading_paragraph ?></h2>
+        <h2><?php echo $leading_paragraph ;?></h2>
       </div>
     </div>
   </div>
