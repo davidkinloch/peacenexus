@@ -8,54 +8,6 @@ document.documentElement.scrollLeft||document.body.scrollLeft:0:0;v=f+b.getBound
 c[b].top+r)/(c[b].height+r),c[b].speed);var e=d.y-c[b].baseY,g=d.x-c[b].baseX;null!==c[b].min&&(a.options.vertical&&!a.options.horizontal&&(e=e<=c[b].min?c[b].min:e),a.options.horizontal&&!a.options.vertical&&(g=g<=c[b].min?c[b].min:g));null!==c[b].max&&(a.options.vertical&&!a.options.horizontal&&(e=e>=c[b].max?c[b].max:e),a.options.horizontal&&!a.options.vertical&&(g=g>=c[b].max?c[b].max:g));a.elems[b].style[D]="translate3d("+(a.options.horizontal?g:"0")+"px,"+(a.options.vertical?e:"0")+"px,"+c[b].zindex+
 "px) "+c[b].transform}a.options.callback(d)};a.destroy=function(){for(var d=0;d<a.elems.length;d++)a.elems[d].style.cssText=c[d].style;u||(window.removeEventListener("resize",w),u=!0);C(q);q=null};w();A();a.refresh=w;return a}console.warn("Rellax: The elements you're trying to select don't exist.")};return n});
 (function($){
-  $(function(){
-
-    var sort = 'latest';
-    var id = getURLParameter('id');
-    if (id != '') {
-      setTimeout(function(){
-        document.getElementById('category-' + id).click();
-      }, 100);
-    }
-
-    $('.category-filter').on('click', function() {
-      $(this).toggleClass('btn-filter-selected');
-      getPosts();
-      })
-
-    $('#sort-latest').on('click', function() {
-      sort = 'latest';
-      $('#sort-title').text('Latest Highlights');
-      getPosts();
-      })
-    
-    $('#sort-az').on('click', function() {
-      sort = 'az';
-      $('#sort-title').text('Highlights A-Z');
-      getPosts();
-      })
-
-    function getPosts() {
-      var ids = [];
-      $('.btn-filter-selected').each(function () {
-          ids.push($(this).attr('data-id'));
-      });
-      $("#post-container").empty();
-      if (ids.length > 0) {
-        $.ajax({
-          method: "POST",
-          url: "/wp-json/api/posts",
-          data: { 
-            ids: ids,
-            sort: sort
-          }
-        })
-        .done(function(res) {
-          //console.log(res);
-          $("#post-template").tmpl(res).appendTo("#post-container");
-        });
-      }
-    }
 
     $('.sidenav').sidenav();
 
@@ -76,8 +28,6 @@ c[b].top+r)/(c[b].height+r),c[b].speed);var e=d.y-c[b].baseY,g=d.x-c[b].baseX;nu
       });
 
      var rellax = new Rellax('.rellax');
-     
-  }); // end of document ready
 
 /*
  if ('serviceWorker' in navigator) {
