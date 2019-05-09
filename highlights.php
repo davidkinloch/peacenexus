@@ -48,7 +48,7 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
 </div>
 <?php endif; ?>
 <?php get_footer(); ?>
-    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
 	
 	<script id="post-template" type="text/x-jQuery-tmpl">
         <div class="col s6 l4">
@@ -70,13 +70,7 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
           </div>
         </div>		
     </script>	
-	
-	<style>
-	.btn-filter-selected {
-  		background-color: red!important;
-	}
-	</style>
-	
+		
 	<script>
 	function getURLParameter(sParam) {
 		var result = '';
@@ -91,53 +85,4 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
 		}
 		return result;
 	}
-		
-	jQuery(document).ready(function( $ ) {	
-		var sort = 'latest';
-		var id = getURLParameter('id');
-		if (id != '') {
-			setTimeout(function(){
-			  document.getElementById('category-' + id).click();
-			}, 100);
-		}
-
-		$('.category-filter').on('click', function() {
-			$(this).toggleClass('btn-filter-selected');
-			getPosts();
-  		})
-
-		$('#sort-latest').on('click', function() {
-			sort = 'latest';
-			$('#sort-title').text('Latest Highlights');
-			getPosts();
-  		})
-		
-		$('#sort-az').on('click', function() {
-			sort = 'az';
-			$('#sort-title').text('Highlights A-Z');
-			getPosts();
-  		})
-
-		function getPosts() {
-			var ids = [];
-			$('.btn-filter-selected').each(function () {
-  				ids.push($(this).attr('data-id'));
-			});
-			$("#post-container").empty();
-			if (ids.length > 0) {
-				$.ajax({
-					method: "POST",
-					url: "/wp-json/api/posts",
-					data: { 
-						ids: ids,
-						sort: sort
-					}
-				})
-				.done(function(res) {
-					//console.log(res);
-					$("#post-template").tmpl(res).appendTo("#post-container");
-				});
-			}
-		}
-	});
-</script>
+  </script>

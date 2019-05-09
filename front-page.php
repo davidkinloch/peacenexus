@@ -8,7 +8,7 @@
     <div class="row center">
       <div class="col s12 m8 offset-m2 light-blue">
         <div class="banner-center"> 
-          <h1 class="white-text">Peace Nexus</h1>
+          <h1 class="white-text">PeaceNexus</h1>
           <h2 class="white-text"><?php echo $leading_paragraph ;?></h2>
         </div>
       </div>
