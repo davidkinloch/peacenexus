@@ -39,7 +39,10 @@
                   </a>
                 </div>
                 <div class="card-action">
-                  <?php include 'content_categories.php'; ?>
+                  	<?php 
+						$currentPostId = $post_id_1;
+						include 'content_categories.php'; 
+					?>
                 </div>
               </div>
             </div>
@@ -56,7 +59,10 @@
                   </a>
                 </div>
                 <div class="card-action">
-                  <?php include 'content_categories.php'; ?>
+                  	<?php 
+						$currentPostId = $post_id_2;
+						include 'content_categories.php'; 
+					?>
                 </div>
               </div>
             </div>
@@ -73,7 +79,10 @@
                   </a>
                 </div>
                 <div class="card-action">
-                  <?php include 'content_categories.php'; ?>
+                  	<?php 
+						$currentPostId = $post_id_3;
+						include 'content_categories.php'; 
+					?>
                 </div>
               </div>
             </div>

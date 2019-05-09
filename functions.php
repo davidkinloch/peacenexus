@@ -295,3 +295,60 @@ add_action('init', 'df_disable_comments_admin_bar');
 //hide custom fields
 //add_filter('acf/settings/show_admin', '__return_false');
 
+
+function sortByTitle($first, $second) {
+	return strcasecmp($first['title'], $second['title']);
+}
+
+function sortByDate($first, $second) {
+	return strcasecmp($second['date'], $first['date']);
+}
+
+function get_category_posts() {
+	$args = [
+		'numberposts' => -1, 
+		'category' => $_POST['ids'],
+	];
+	$posts = get_posts($args);
+    $res = [];            
+	foreach($posts as $post) {
+		$postId = $post->ID;
+		$arr = [];
+		//$arr['data'] = (array) $post;
+		$arr['permalink'] = get_the_permalink($postId);
+		$arr['thumbnail'] = get_the_post_thumbnail_url($postId);
+		$arr['title'] = get_the_title($postId);
+		$arr['leading_paragraph'] = get_field('leading_paragraph', $postId);
+		$arr['date'] = $post->post_modified_gmt;
+		$postCategories = get_the_category($postId);
+		foreach($postCategories as $postCategory) {
+			if ($postCategory->parent == 3) {
+				$arr['region_slug'] = $postCategory->slug;
+				$arr['region_name'] = $postCategory->cat_name;
+			}
+			if ($postCategory->parent == 9) {
+				$arr['service_slug'] = $postCategory->slug;
+				$arr['service_name'] = $postCategory->cat_name;
+			}
+		}	
+		$res[] = $arr;
+	}
+	
+	if ($_POST['sort'] == 'az') {
+		usort($res, 'sortByTitle');	
+	} else {
+		usort($res, 'sortByDate');	
+	}	
+
+	return $res;
+}
+
+add_action('rest_api_init', function () {
+	register_rest_route( 'api', '/posts', array(
+    'methods' => 'POST',
+    'callback' => 'get_category_posts',
+  ) );
+} );
+
+//Prevent auto-redirect
+remove_action('template_redirect', 'redirect_canonical');
