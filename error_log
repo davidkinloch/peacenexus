@@ -1,0 +1,6 @@
+[02-May-2019 19:09:18 Europe/London] PHP Fatal error:  Call to undefined function get_header() in /home/dkinhcom/pnwp.dkinloch.com/wp-content/themes/peacenexus/index.php on line 1
+[02-May-2019 22:08:56 Europe/London] PHP Fatal error:  Call to undefined function get_header() in /home/dkinhcom/pnwp.dkinloch.com/wp-content/themes/peacenexus/index.php on line 1
+[03-May-2019 17:25:18 Europe/London] PHP Fatal error:  Call to undefined function get_header() in /home/dkinhcom/pnwp.dkinloch.com/wp-content/themes/peacenexus/index.php on line 1
+[06-May-2019 18:13:16 Europe/London] PHP Fatal error:  Call to undefined function get_header() in /home/dkinhcom/pnwp.dkinloch.com/wp-content/themes/peacenexus/index.php on line 1
+[06-May-2019 19:00:20 Europe/London] PHP Fatal error:  Call to undefined function get_header() in /home/dkinhcom/pnwp.dkinloch.com/wp-content/themes/peacenexus/index.php on line 1
+[08-May-2019 15:07:32 Europe/London] PHP Fatal error:  Call to undefined function get_header() in /home/dkinhcom/pnwp.dkinloch.com/wp-content/themes/peacenexus/index.php on line 1
