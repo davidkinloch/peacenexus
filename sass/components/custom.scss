@@ -982,6 +982,12 @@ nav {
   animation: moveUp 0.3s ease forwards;
 }
 
+.cms-text {
+  padding-left: 15px;
+  list-style: disc;
+  margin-left: 15px;
+}
+
 @-webkit-keyframes moveUp {
   0% { opacity: 0; }
   100% { -webkit-transform: translateY(0); opacity: 1; }
