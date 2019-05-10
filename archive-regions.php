@@ -24,7 +24,6 @@
           <a class="card-link waves-effect waves-light" href="<?php the_permalink();?>">
             <div class="card-content">
               <h3 class="card-title"><?php the_title();?></h3>
-              <p><?php the_field('leading_paragraph');?></p>
               <span class="btn btn-transparent waves-effect waves-light">Learn More</span>
             </div>
           </a>
