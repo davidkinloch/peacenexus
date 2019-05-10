@@ -450,6 +450,9 @@ nav {
     h1, h2, p, a {
       color: #FFF;
     }
+    a {
+      text-decoration: underline;
+    }
     ul li {
       padding-left: 15px;
       list-style: disc;
@@ -988,6 +991,9 @@ nav {
     padding-left: 15px;
     list-style: disc;
     margin-left: 15px;
+  }
+  a {
+    text-decoration: underline;
   }
 }
 
