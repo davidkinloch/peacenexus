@@ -11,7 +11,7 @@ c[b].top+r)/(c[b].height+r),c[b].speed);var e=d.y-c[b].baseY,g=d.x-c[b].baseX;nu
 
     $('.sidenav').sidenav();
 
-     $('select').formSelect();
+     $('.lang-switch select').formSelect();
 
     $(".dropdown-trigger").dropdown();
 

@@ -2,7 +2,7 @@
 
     $('.sidenav').sidenav();
 
-     $('select').formSelect();
+     $('.lang-switch select').formSelect();
 
     $(".dropdown-trigger").dropdown();
 
