@@ -89,10 +89,17 @@
           </div>
         </div>
         
+
+
+
         <?php elseif( get_row_layout() == 'links' ): 
-          $title = get_sub_field('title');
-          $description = get_sub_field('description'); 
-        ?>
+        $title = get_sub_field('title');
+        $description = get_sub_field('description');
+        $left = get_sub_field('left_block');
+        $middle = get_sub_field('middle_block');
+        $right = get_sub_field('right_block');
+       ?>
+
         <div class="section links">
           <div class="row center">
             <div class="col s12">
@@ -100,28 +107,32 @@
               <?php echo $description ?>
             </div>
             <div class="col s6 m4 l4">
-              <ul class="links__menu">
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-              </ul>
+                <?php if( have_rows('left_block') ): while ( have_rows('left_block') ) : the_row(); ?>
+                  <ul class="links__menu">
+                  <?php if( have_rows('links') ): while ( have_rows('links') ) : the_row();  ?>     
+                      <li><a href="<?php echo get_sub_field('link_url');?>"><i class="material-icons">chevron_right</i><?php echo get_sub_field('link_label');?></a></li>
+                    <?php   endwhile; endif; ?>
+                  </ul>
+                <?php endwhile; endif; ?>
             </div>
+            
             <div class="col s6 m4 l4">
-              <ul class="links__menu">
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-              </ul>
+              <?php if( have_rows('middle_block') ): while ( have_rows('middle_block') ) : the_row(); ?>
+                <ul class="links__menu">
+                <?php if( have_rows('links') ): while ( have_rows('links') ) : the_row();  ?>     
+                    <li><a href="<?php echo get_sub_field('link_url');?>"><i class="material-icons">chevron_right</i><?php echo get_sub_field('link_label');?></a></li>
+                  <?php   endwhile; endif; ?>
+                </ul>
+              <?php endwhile; endif; ?>
             </div>
             <div class="col s6 m4 l4 offset-s3">
-              <ul class="links__menu">
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-                <li><a href="#"><i class="material-icons">chevron_right</i>partner link</a></li>
-              </ul>
+              <?php if( have_rows('right_block') ): while ( have_rows('right_block') ) : the_row(); ?>
+                <ul class="links__menu">
+                <?php if( have_rows('links') ): while ( have_rows('links') ) : the_row();  ?>     
+                    <li><a href="<?php echo get_sub_field('link_url');?>"><i class="material-icons">chevron_right</i><?php echo get_sub_field('link_label');?></a></li>
+                  <?php   endwhile; endif; ?>
+                </ul>
+              <?php endwhile; endif; ?>
             </div>
           </div>
         </div>
