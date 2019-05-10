@@ -144,7 +144,7 @@
 
         <div class="section">
           <div class="row">
-            <div class="col s12 center">
+            <div class="col s12 center no-padding">
               <figure class="quote">
                 <figcaption class="quote__text valign-wrapper">
                   <div class="row"> 
