@@ -65,7 +65,7 @@ p {
       color: $primary-color;
     }
     .material-icons {
-      transition: all .3s ease-in;
+      transition: transform .3s ease-in;
     }
 
     &.btn-filter-selected {
@@ -91,7 +91,7 @@ p {
       color: #FFF;
     }
     .material-icons {
-      transition: all .3s ease-in;
+      transition: transform .3s ease-in;
     }
 
     &.btn-filter-selected {
@@ -420,6 +420,7 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  color: #FFF;
   .container {
     height: 100%;
     position: relative;
@@ -449,7 +450,7 @@ nav {
     h1, h2, p, a {
       color: #FFF;
     }
-    ul {
+    ul li {
       padding-left: 15px;
       list-style: disc;
       margin-left: 15px;
@@ -983,9 +984,11 @@ nav {
 }
 
 .cms-text {
-  padding-left: 15px;
-  list-style: disc;
-  margin-left: 15px;
+  ul li {
+    padding-left: 15px;
+    list-style: disc;
+    margin-left: 15px;
+  }
 }
 
 @-webkit-keyframes moveUp {
