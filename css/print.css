@@ -1,7 +1,7 @@
 @media print {    
   .nav .brand-logo {
     width: 25%;
-    img {
+    svg {
       max-width: 250px;
     }
   }

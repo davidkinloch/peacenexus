@@ -7,17 +7,17 @@
             <li><a href="mailto:info@peacenexus.org" class="email" itemprop="email">info@peacenexus.org</a></li>
           </ul>
         </div>
-        <div class="col s12 m3">
+        <div class="col s12 m3 no-print">
            <?php $defaults = array( 'theme_location'  => 'footer-links-left', 'container' => 'ul' ); wp_nav_menu( $defaults );?>  
         </div>
       </div>
-      <a href="https://www.leidar.com" target="_blank" class="builtby noprint">Website by Leidar</a>
+      <a href="https://www.leidar.com" target="_blank" class="builtby no-print">Website by Leidar</a>
     </div>
     <div class="footer-copyright">
       <div class="container">
         <div class="row">
             <div class="col s12">
-              &copy; 2019 PeaceNexus Foundation <a href="<?php echo get_page_link(102); ?>">Terms &amp; Conditions</a> <a href="<?php echo get_page_link(104); ?>">Privacy</a><a class="right noprint" href="#top"><img class="noprint" src="<?php bloginfo('template_url')?>/assets/src/up.svg" alt="Go to top of the page"></a>
+              &copy; 2019 PeaceNexus Foundation <a class="no-print" href="<?php echo get_page_link(102); ?>">Terms &amp; Conditions</a> <a class="no-print" href="<?php echo get_page_link(104); ?>">Privacy</a><a class="right no-print" href="#top"><img class="no-print" src="<?php bloginfo('template_url')?>/assets/src/up.svg" alt="Go to top of the page"></a>
             </div>
         </div>
       </div>

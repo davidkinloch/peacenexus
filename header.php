@@ -27,7 +27,7 @@
         <header class="header scrollspy" id="top">
           <nav role="navigation">
             <div class="nav-wrapper container">
-              <a id="logo-container" href="/" class="brand-logo"><img src="<?php bloginfo('template_url')?>/assets/src/LogoPN10.svg" alt=""></a>
+              <a id="logo-container" href="/" class="brand-logo"><img src="<?php bloginfo('template_url')?>/assets/src/LogoPN10.svg" alt="PeaceNexus" class="no-print"></a>
               <ul class="main-nav right hide-on-med-and-down no-print">
                 <?php wp_nav_menu_no_ul(); ?>
                 <li class="item-search">
