@@ -1019,6 +1019,15 @@ nav {
   }
 }
 
+.cms_content {
+  .cms-text {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
 @-webkit-keyframes moveUp {
   0% { opacity: 0; }
   100% { -webkit-transform: translateY(0); opacity: 1; }

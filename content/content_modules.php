@@ -174,6 +174,19 @@
         </div>
       </div>
 
+      <?php elseif( get_row_layout() == 'cms_content' ): 
+        $embed_code = get_sub_field('add_wysiwyg');
+      ?>
+      <div class="section cms_content">
+        <div class="row">
+          <div class="col s12">
+            <div class="cms-text">
+              <?php echo $embed_code ;?>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       <?php elseif( get_row_layout() == 'grid' ): ?>
         <!-- Rollover Blocks -->
