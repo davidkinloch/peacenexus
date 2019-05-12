@@ -43,9 +43,9 @@
                   <form>
                     <div class="input-field">
                       <select>
-                        <option value="/" selected="">EN</option>
-                        <option value="#">FR</option>
-                        <option value="#">RU</option>
+                        <option value="https://peacenexus.org" selected="">EN</option>
+                          <option value="https://fr.peacenexus.org">FR</option>
+                          <option value="https://ru.peacenexus.org">RU</option>
                       </select>
                     </div>
                   </form>
@@ -68,9 +68,9 @@
                     <form>
                       <div class="input-field">
                         <select>
-                          <option value="/" selected="">EN</option>
-                          <option value="#">FR</option>
-                          <option value="#">RU</option>
+                          <option value="https://peacenexus.org" selected="">EN</option>
+                          <option value="https://fr.peacenexus.org">FR</option>
+                          <option value="https://ru.peacenexus.org">RU</option>
                         </select>
                         
                       </div>

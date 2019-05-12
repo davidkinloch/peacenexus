@@ -29,6 +29,18 @@ c[b].top+r)/(c[b].height+r),c[b].speed);var e=d.y-c[b].baseY,g=d.x-c[b].baseX;nu
 
      var rellax = new Rellax('.rellax');
 
+    $('.lang-switch select').change(function(){
+        var url = $(this).val();
+        window.location = url;
+    });
+
+    var $select1 = $('.lang-switch select');
+    //  $select1.material_select();
+      $select1.on('change', function (e) {
+          var url = $(this).val();
+          window.location = url;
+      });
+
 /*
  if ('serviceWorker' in navigator) {
     navigator.serviceWorker

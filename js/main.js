@@ -20,6 +20,18 @@
 
      var rellax = new Rellax('.rellax');
 
+    $('.lang-switch select').change(function(){
+        var url = $(this).val();
+        window.location = url;
+    });
+
+    var $select1 = $('.lang-switch select');
+    //  $select1.material_select();
+      $select1.on('change', function (e) {
+          var url = $(this).val();
+          window.location = url;
+      });
+
 /*
  if ('serviceWorker' in navigator) {
     navigator.serviceWorker
