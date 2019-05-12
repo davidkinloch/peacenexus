@@ -322,6 +322,10 @@ nav {
       padding: 0;
       border-bottom: transparent 4px solid; 
       transition: all .15s ease-in-out;
+      &.btn-large {
+        height: 46px;
+        line-height: 46px;
+      }
       &.btn {
         border: none;
         line-height: 50px;
