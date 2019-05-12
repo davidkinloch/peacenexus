@@ -471,6 +471,15 @@ nav {
   }
 }
 
+.banner-text.section {
+  .cta-block a {
+    text-decoration: none;
+  }
+  a.breadcrumb {
+    text-decoration: none;
+  }
+}
+
 #index-banner {
   background-attachment: fixed;
 }
