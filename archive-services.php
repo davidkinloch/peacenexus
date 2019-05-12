@@ -21,7 +21,7 @@
     <div class="row">
       <?php $postCount = 1; while (have_posts()) : $postCount++;  the_post(); ?>
         <div class="col s6 l4 <?php if($postCount == 4) { ?>offset-s3<?php } ?>">
-          <div class="card waves-effect waves-light">
+          <div class="card">
             <a class="card-link waves-effect waves-light" href="<?php the_permalink();?>"> 
               <div class="card-content">
                 <h3 class="card-title"><?php the_title();?></h3>
