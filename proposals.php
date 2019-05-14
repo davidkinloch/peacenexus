@@ -3,7 +3,9 @@
 Template Name: Calls For Proposal
 */
 ); ?>
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(
+  $leading_paragraph = get_field('leading_paragraph')
+); ?>
 
 <div class="section banner banner-text" id="proposals-banner" >
   <div class="container">
@@ -33,7 +35,7 @@ Template Name: Calls For Proposal
         <li class="tab col s3">
           <a href="#focus-2">
             <span>Step Two</span>
-            <h3>2. Are you eligible?</h3>
+            <h3>2. Are You Eligible?</h3>
           </a>
         </li>
         <li class="tab col s3">
@@ -121,6 +123,7 @@ Template Name: Calls For Proposal
           <div class="col s12 l6">
             <div class="row">
               <div class="col s12">
+                <div class="tab-content__final">
                   <h5>Organisational Development</h5>
                   <div class="cta-block">
                     <a href="<?php echo $og['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $og['cta_label_2']; ?></a>

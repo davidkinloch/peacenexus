@@ -871,8 +871,14 @@ nav {
     color: $primary-color;
     font-family: $font-stack;
     font-size: 18px;
-    letter-spacing: 1px;
+    font-weight: 500;
     margin-bottom: 10px;
+  }
+  ul li {
+    padding-left: 15px;
+    list-style: disc;
+    margin-left: 15px;
+    font-size: 1.067rem;
   }
   .cta-block {
     padding: 0;
@@ -885,6 +891,9 @@ nav {
     color: #666666;
     margin-bottom: 12px;
     margin-top: 12px;
+  }
+  &__final {
+    padding-top: 0px;
   }
 }
 
