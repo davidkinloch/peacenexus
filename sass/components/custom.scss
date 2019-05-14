@@ -896,7 +896,10 @@ nav {
     margin-top: 12px;
   }
   &__final {
-    padding-top: 90px;
+    @media #{$large-and-up} {
+      padding-top: 20px;
+      padding-left: 90px;
+    }
   }
 }
 
