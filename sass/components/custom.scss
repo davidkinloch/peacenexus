@@ -639,10 +639,14 @@ nav {
     }
     .card-content {
       .card-title {
-        margin-bottom: 30px;
+        margin-bottom: 12px;
         color: $primary-color;
-        word-break: break-all;
-        font-size: 1.467rem
+        font-size: 1.2rem;
+        line-height: 1.4;
+        height: 30px;
+         @media #{$extra-large-and-up} {
+          font-size: 1.2rem;
+         }
       }
       p {
         margin-bottom: 30px;
