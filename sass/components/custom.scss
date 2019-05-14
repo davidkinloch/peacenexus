@@ -327,13 +327,16 @@ nav {
     position: absolute;
     top: 44px;
     left: 6px;
+    width: 250px;
     background: #fff;
     -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+     @media #{$extra-large-and-up} {
+        left: 17px;
+     }
     }
     ul li {
         float: none; 
-        width: 150px;
     }
     ul li a {
       padding: 0 6px;
