@@ -9,7 +9,7 @@
         <div class="container">
           <div class="row">
             <div class="col s12 m8 offset-m2">
-              <a href="/regions" class="breadcrumb">SERVICE</a>
+              <a href="/services" class="breadcrumb">SERVICES</a>
               <a href="<?php the_permalink(); ?>" class="breadcrumb"><?php the_title(); ?></a>
             </div>
           </div>
