@@ -203,6 +203,7 @@
           $image = get_sub_field('image');
           $title = get_sub_field('title');
           $link = get_sub_field('link');
+          $white = get_sub_field('white');
       ?>
       <div class="section jigsaw jigsaw--solo">
         <div class="row">
@@ -212,7 +213,7 @@
                   <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
                 </div>
                 <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
-                  <h3 class="card-title activator"><?php echo $title ;?></h3>
+                  <h3 class="card-title activator" <?php if($white): ?>style="color:#FFF"<?php endif;?>><?php echo $title ;?></h3>
                 </a>
               </div>
           </div>
