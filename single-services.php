@@ -4,7 +4,7 @@
     $map_text = get_field('post_map_text');
     $leading_paragraph = get_field('leading_paragraph');
   ?>
-     <div class="section banner banner-text" id="region-specific-banner">
+     <div class="section half-margin banner banner-text" id="region-specific-banner">
         <img class="map" src="<?php echo $map['url'] ?>" alt="<?php echo $map['alt'] ?>" >
         <div class="container">
           <div class="row">

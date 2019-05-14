@@ -3,7 +3,7 @@
   <?php if (have_posts()) : while (have_posts()) : the_post(); 
     $leading_paragraph = get_field('leading_paragraph');
   ?>
-     <div class="section no-margin banner banner-text" id="partnername-banner" >
+     <div class="section half-margin banner banner-text" id="partnername-banner" >
         <div class="container">
           <div class="row no-margin">
             <div class="col s12 m8 offset-m2">
