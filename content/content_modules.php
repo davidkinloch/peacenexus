@@ -21,7 +21,7 @@
         <div class="section decked">
           <div class="row">
             <div class="col s12 center">
-              <h2><?php echo $title ?></h2>
+              <h2 class="blue-text"><?php echo $title ?></h2>
               <?php echo $description ?>
             </div>
           </div>
@@ -103,7 +103,7 @@
         <div class="section links">
           <div class="row center">
             <div class="col s12">
-              <h2><?php echo $title ?></h2>
+              <h2 class="blue-text"><?php echo $title ?></h2>
               <?php echo $description ?>
             </div>
             <div class="col s6 m4 l4">
