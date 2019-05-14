@@ -317,7 +317,6 @@ nav {
       }
       ul li a {
         border-color: transparent;
-        background-color: rgba(0,0,0,0.05);
       }
     }
     li {
@@ -340,7 +339,10 @@ nav {
      }
     }
     ul li {
-        float: none;
+      float: none;
+      &.current-menu-item a {
+        background-color: rgba(0,0,0,0.05);
+      } 
     }
     ul li a {
       padding: 0 6px;
