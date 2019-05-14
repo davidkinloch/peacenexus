@@ -47,7 +47,7 @@ Template Name: Calls For Proposal
         <li class="tab col s3">
           <a href="#focus-4">
             <span>Step Four</span>
-            <h3>4. Apply here</h3>
+            <h3>4. Apply Here</h3>
           </a>
         </li>
       </ul>
