@@ -315,6 +315,10 @@ nav {
       a {
         border-color: $primary-color;
       }
+      ul li a {
+        border-color: transparent;
+        background-color: rgba(0,0,0,0.05);
+      }
     }
     li {
       position: relative;
@@ -336,7 +340,7 @@ nav {
      }
     }
     ul li {
-        float: none; 
+        float: none;
     }
     ul li a {
       padding: 0 6px;
