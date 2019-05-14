@@ -342,6 +342,7 @@ nav {
       float: none;
       &.current-menu-item a {
         background-color: rgba(0,0,0,0.05);
+        border-color: transparent;
       } 
     }
     ul li a {
