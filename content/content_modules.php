@@ -196,6 +196,29 @@
         </div>
       </div>
 
+    <?php elseif( get_row_layout() == 'solo_grid' ): 
+        if( have_rows('main') ): 
+        while( have_rows('main') ): the_row(); 
+        // vars
+          $image = get_sub_field('image');
+          $title = get_sub_field('title');
+          $link = get_sub_field('link');
+      ?>
+      <div class="section jigsaw jigsaw--solo">
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+                <div class="card-image">
+                  <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
+                </div>
+                <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
+                  <h3 class="card-title activator"><?php echo $title ;?></h3>
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <?php  endwhile; endif; ?>
 
       <?php elseif( get_row_layout() == 'grid' ): ?>
         <!-- Rollover Blocks -->
@@ -211,12 +234,12 @@
                 ?>
               
               <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
+                <div class="card-image">
                   <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
                 </div>
-                <div class="card-content waves-effect waves-block waves-light">
+                <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
                   <h3 class="card-title activator"><?php echo $title ;?></h3>
-                </div>
+                </a>
               </div>
               <?php  endwhile; endif; ?>
             </div>
@@ -231,12 +254,12 @@
                     $link = get_sub_field('link');
                   ?>
                   <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
+                    <div class="card-image">
                       <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
                     </div>
-                    <div class="card-content waves-effect waves-block waves-light">
+                    <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
                       <h3 class="card-title activator"><?php echo $title ;?></h3>
-                    </div>
+                    </a>
                   </div>
                   <?php  endwhile; endif; ?>
                 </div>
@@ -249,12 +272,12 @@
                     $link = get_sub_field('link');
                   ?>
                   <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
+                    <div class="card-image">
                       <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
                     </div>
-                    <div class="card-content waves-effect waves-block waves-light">
+                    <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
                       <h3 class="card-title activator"><?php echo $title ;?></h3>
-                    </div>
+                    </a>
                   </div>
                   <?php  endwhile; endif; ?>
                 </div>
@@ -269,12 +292,12 @@
                     $link = get_sub_field('link');
                   ?>
                   <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
+                    <div class="card-image">
                       <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
                     </div>
-                    <div class="card-content waves-effect waves-block waves-light">
+                    <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
                       <h3 class="card-title activator"><?php echo $title ;?></h3>
-                    </div>
+                    </a>
                   </div>
                   <?php  endwhile; endif; ?>
                 </div>
