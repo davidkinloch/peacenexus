@@ -26,6 +26,8 @@
             </div>
           </div>
           <div class="row">
+
+            <?php if($post_id_1): ?>
             <div class="col s12 m6 l4">
               <div class="card">
                 <div class="card-image">
@@ -40,12 +42,15 @@
                 </div>
                 <div class="card-action">
                   	<?php 
-						$currentPostId = $post_id_1;
-						include 'content_categories.php'; 
-					?>
+          						$currentPostId = $post_id_1;
+          						include 'content_categories.php'; 
+          					?>
                 </div>
               </div>
             </div>
+            <?php endif; ?>
+
+            <?php if($post_id_2): ?>
             <div class="col s12 m6 l4">
               <div class="card">
                 <div class="card-image">
@@ -60,12 +65,15 @@
                 </div>
                 <div class="card-action">
                   	<?php 
-						$currentPostId = $post_id_2;
-						include 'content_categories.php'; 
-					?>
+          						$currentPostId = $post_id_2;
+          						include 'content_categories.php'; 
+          					?>
                 </div>
               </div>
             </div>
+            <?php endif; ?>
+
+            <?php if($post_id_3): ?>
             <div class="col s12 m6 l4 offset-m3">
               <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
@@ -80,12 +88,13 @@
                 </div>
                 <div class="card-action">
                   	<?php 
-						$currentPostId = $post_id_3;
-						include 'content_categories.php'; 
-					?>
+            						$currentPostId = $post_id_3;
+            						include 'content_categories.php'; 
+            					?>
                 </div>
               </div>
             </div>
+            <?php endif; ?>
           </div>
         </div>
         
