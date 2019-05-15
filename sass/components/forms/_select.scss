@@ -1,7 +1,11 @@
 /* Select Field
    ========================================================================== */
 
-select { display: none; }
+.lang-switch {
+  select { display: none; }
+}
+
+
 select.browser-default { display: block; }
 
 select {
