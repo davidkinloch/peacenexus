@@ -1,5 +1,24 @@
 <?php
 
+function my_init()   
+{  
+    if (!is_admin())   
+    {  
+        wp_deregister_script('jquery');  
+  
+        // Load a copy of jQuery from the Google API CDN  
+        // The last parameter set to TRUE states that it should be loaded  
+        // in the footer.  
+        wp_register_script('jquery', '//code.jquery.com/jquery-2.1.1.min.js', FALSE, '2.1.1', TRUE);  
+        
+        wp_enqueue_script('jquery');
+        wp_enqueue_script('materialize', '//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js', FALSE, '1.11.0', TRUE);  
+        wp_enqueue_script( 'production.min', get_template_directory_uri() . '/js/build/production.min.js', array(), '1.0.0', true );
+    }  
+}  
+add_action('init', 'my_init');
+
+
 // menu
 function wp_nav_menu_no_ul()
 {
