@@ -149,6 +149,7 @@ Template Name: Calls For Proposal
     </div>
   </div>
 </div>
+</div>
 
 <?php include 'content/content_modules.php'; ?>
 
