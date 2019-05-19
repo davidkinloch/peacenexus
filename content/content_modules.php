@@ -225,83 +225,93 @@
         <!-- Rollover Blocks -->
         <div class="section jigsaw">
           <div class="row">
-            <div class="col s12 m12 l6">
+            
               <?php if( have_rows('main_square') ): 
                 while( have_rows('main_square') ): the_row(); 
                 // vars
                   $image = get_sub_field('image');
                   $title = get_sub_field('title');
                   $link = get_sub_field('link');
+                  $white = get_sub_field('white');
+                  $border = get_sub_field('highlighted_border');
                 ?>
-              
-              <div class="card">
-                <div class="card-image">
-                  <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
+              <div class="col s12 m12 l6 <?php if($border): ?>active<?php endif;?>">
+                <div class="card">
+                  <div class="card-image">
+                    <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
+                  </div>
+                  <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
+                    <h3 class="card-title activator" <?php if($white): ?>style="color:#FFF"<?php endif;?>><?php echo $title ;?></h3>
+                  </a>
                 </div>
-                <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
-                  <h3 class="card-title activator"><?php echo $title ;?></h3>
-                </a>
               </div>
               <?php  endwhile; endif; ?>
-            </div>
-            <div class="col s12 m12 l6">
+
+              <div class="col s12 m12 l6 ">
               <div class="row">
-                <div class="col s12 m6">
                   <?php if( have_rows('small_left_square') ): 
                   while( have_rows('small_left_square') ): the_row(); 
                   // vars
                     $image = get_sub_field('image');
                     $title = get_sub_field('title');
                     $link = get_sub_field('link');
+                    $white = get_sub_field('white');
+                    $border = get_sub_field('highlighted_border');
                   ?>
-                  <div class="card">
-                    <div class="card-image">
-                      <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
+                  <div class="col s12 m6 <?php if($border): ?>active<?php endif;?>">
+                    <div class="card">
+                      <div class="card-image">
+                        <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
+                      </div>
+                      <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
+                        <h3 class="card-title activator" <?php if($white): ?>style="color:#FFF"<?php endif;?>><?php echo $title ;?></h3>
+                      </a>
                     </div>
-                    <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
-                      <h3 class="card-title activator"><?php echo $title ;?></h3>
-                    </a>
                   </div>
                   <?php  endwhile; endif; ?>
-                </div>
-                <div class="col s12 m6">
+          
                   <?php if( have_rows('small_right_square') ): 
                   while( have_rows('small_right_square') ): the_row(); 
                   // vars
                     $image = get_sub_field('image');
                     $title = get_sub_field('title');
                     $link = get_sub_field('link');
+                    $white = get_sub_field('white');
+                   $border = get_sub_field('highlighted_border');
                   ?>
-                  <div class="card">
-                    <div class="card-image">
-                      <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
+                  <div class="col s12 m6 <?php if($border): ?>active<?php endif;?>">
+                    <div class="card">
+                      <div class="card-image">
+                        <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
+                      </div>
+                      <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
+                        <h3 class="card-title activator" <?php if($white): ?>style="color:#FFF"<?php endif;?>><?php echo $title ;?></h3>
+                      </a>
                     </div>
-                    <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
-                      <h3 class="card-title activator"><?php echo $title ;?></h3>
-                    </a>
                   </div>
                   <?php  endwhile; endif; ?>
-                </div>
               </div>
               <div class="row">
-                <div class="col s12 m12 active">
-                   <?php if( have_rows('letterbox') ): 
+                <?php if( have_rows('letterbox') ): 
                   while( have_rows('letterbox') ): the_row(); 
                   // vars
                     $image = get_sub_field('image');
                     $title = get_sub_field('title');
                     $link = get_sub_field('link');
+                    $white = get_sub_field('white');
+                    $border = get_sub_field('highlighted_border');
                   ?>
-                  <div class="card">
-                    <div class="card-image">
-                      <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
+                  <div class="col s12 m12 <?php if($border): ?>active<?php endif;?>">
+                    <div class="card">
+                      <div class="card-image">
+                        <img  class="responsive-img rollover__image"  alt="<?php echo $title ;?>" src="<?php echo $image; ?>">
+                      </div>
+                      <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
+                        <h3 class="card-title activator" <?php if($white): ?>style="color:#FFF"<?php endif;?>><?php echo $title ;?></h3>
+                      </a>
                     </div>
-                    <a href="<?php echo $link; ?>" class="card-content waves-effect waves-block waves-light">
-                      <h3 class="card-title activator"><?php echo $title ;?></h3>
-                    </a>
-                  </div>
-                  <?php  endwhile; endif; ?>
                 </div>
+                <?php  endwhile; endif; ?>
               </div>
             </div>
           </div>
