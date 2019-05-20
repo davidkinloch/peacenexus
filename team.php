@@ -47,8 +47,7 @@ while( have_rows('team_section') ): the_row();
           <div class="col s12">
             <h2><?php echo $group_title; ?></h2>
           </div>
-         <?php if( have_rows('team_bios') ): ?> 
-          <?php while ( have_rows('team_bios') ) : the_row(); 
+           <?php if( have_rows('team_bios') ): while ( have_rows('team_bios') ) : the_row(); 
             $image = get_sub_field('image');
             $name = get_sub_field('name');
             $position = get_sub_field('position');
@@ -66,7 +65,7 @@ while( have_rows('team_section') ): the_row();
                 </div>
               </div>
             </div>
-          <?php endwhile; ?><?php endif; ?> 
+          <?php endwhile; endif; ?> 
         </div>
       </div>
     
