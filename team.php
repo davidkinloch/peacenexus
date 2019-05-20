@@ -35,32 +35,43 @@ Template Name: Team Page
   </div>
   -->
 
-<?php if( have_rows('team_bios') ): ?>
-  <div class="section teamgrid">
-    <div class="row">
-      <?php while ( have_rows('team_bios') ) : the_row(); 
-        $image = get_sub_field('image');
-        $name = get_sub_field('name');
-        $position = get_sub_field('position');
-        $description = get_sub_field('description');
-      ?>
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" class="responsive-img rollover__image">
-            </div>
-            <div class="card-content">
-              <h5 class="small"><?php echo $position ?></h5>
-              <h3 class="card-title"><?php echo $name ?></h3>
-              <?php echo $description ?>
-            </div>
-          </div>
-        </div>
-      <?php endwhile; ?> 
-    </div>
-  </div>
-</div>
-<?php endif; ?> 
+<?php
+if( have_rows('team_section') ):
+while( have_rows('team_section') ): the_row(); 
+  $group_title = get_sub_field('group_title');
+?>
+    
+      <div class="section teamgrid">
 
+        <div class="row">
+          <div class="col s12">
+            <h2><?php echo $group_title; ?></h2>
+          </div>
+         <?php if( have_rows('team_bios') ): ?> 
+          <?php while ( have_rows('team_bios') ) : the_row(); 
+            $image = get_sub_field('image');
+            $name = get_sub_field('name');
+            $position = get_sub_field('position');
+            $description = get_sub_field('description');
+          ?>
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" class="responsive-img rollover__image">
+                </div>
+                <div class="card-content">
+                  <h5 class="small"><?php echo $position ?></h5>
+                  <h3 class="card-title"><?php echo $name ?></h3>
+                  <?php echo $description ?>
+                </div>
+              </div>
+            </div>
+          <?php endwhile; ?><?php endif; ?> 
+        </div>
+      </div>
+    
+    
+  <?php endwhile; endif; ?>
+  </div>
 <?php endwhile; endif; ?>
 <?php get_footer(); ?>
