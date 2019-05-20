@@ -25,7 +25,7 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
     <?php foreach($regions as $region) {  ?>
         <a data-id="<?=$region->cat_ID?>" id="category-<?=$region->slug?>" class="region-filter category-filter btn btn-secondary btn-transparent waves-effect waves-light" href="#"><?=$region->cat_name?> <i class="material-icons right">clear</i></a>
     <?php } ?>
-        <a id="region-all" class="btn btn-secondary btn-transparent waves-effect waves-light" href="#">Show All</a>
+        <a id="region-all" class="btn btn-secondary btn-transparent waves-effect waves-light" href="#">Show All Regions</a>
       </div>
     </div>
     <div class="row filter-btns">
@@ -33,7 +33,7 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
     <?php foreach($services as $service) { ?>
         <a data-id="<?=$service->cat_ID?>" id="category-<?=$service->slug?>" class="service-filter category-filter btn btn-primary btn-transparent waves-effect waves-light" href="#"><?=$service->cat_name?> <i class="material-icons right">clear</i></a>
     <?php } ?>
-        <a id="service-all" class="btn btn-secondary btn-transparent waves-effect waves-light" href="#">Show All</a>
+        <a id="service-all" class="btn btn-primary btn-transparent waves-effect waves-light" href="#">Show All Services</a>
       </div>
        <div class="col s12 l3">
         <a class='dropdown-trigger btn btn-large btn-filter' href='#' data-target='dropdown-highlight'><i class="material-icons right">keyboard_arrow_down</i> <span id="sort-title">Latest Highlights</span></a>
