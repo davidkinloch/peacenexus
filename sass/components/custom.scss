@@ -560,7 +560,7 @@ nav {
   margin-bottom: 20px;
   padding-top: 0;
   @media #{$medium-and-up} {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1090,6 +1090,15 @@ nav {
 }
 
 .cms_content {
+  &--blue {
+    background-color: $tertiary-color;
+    color: #FFF;
+    padding: 20px;
+    a {
+      color: #FFF;
+
+    }
+  }
   .cms-text {
     img {
       width: 100%;

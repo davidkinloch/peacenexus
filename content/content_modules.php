@@ -196,6 +196,19 @@
         </div>
       </div>
 
+      <?php elseif( get_row_layout() == 'blue_cms_content' ): 
+        $embed_code = get_sub_field('add_wysiwyg');
+      ?>
+      <div class="section cms_content cms_content--blue">
+        <div class="row">
+          <div class="col s12">
+            <div class="cms-text">
+              <?php echo $embed_code ;?>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <?php elseif( get_row_layout() == 'solo_grid' ): 
         if( have_rows('main') ): 
         while( have_rows('main') ): the_row(); 
