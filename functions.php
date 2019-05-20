@@ -110,7 +110,7 @@ function region_post_type() {
     // Register post type
     register_post_type('regions' , array(
          'labels'              => $labels,
-        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+        'supports'            => array( 'title', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
         'hierarchical'        => true,
         'public'              => true,
         'show_ui'             => true,
