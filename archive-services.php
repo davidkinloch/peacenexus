@@ -18,7 +18,10 @@
 <div class="container">
   <div class="section countries">
     <div class="row">
-      <?php $postCount = 1; while (have_posts()) : $postCount++;  the_post(); ?>
+      <?php $postCount = 1; while (have_posts()) : $postCount++;  the_post(); 
+        $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+        $white = get_field('white');
+      ?>
         <div class="col s6 l4 <?php if($postCount == 4) { ?>offset-s3<?php } ?>">
           <div class="card">
             <a class="card-link waves-effect waves-light" href="<?php the_permalink();?>"> 

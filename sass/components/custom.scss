@@ -644,11 +644,12 @@ nav {
   }
   .card {
     background: #E1E1E1;
-    @media #{$extra-large-and-up} {
+    background-position: center center;
+    background-size: cover;
+   
       .card-link {
         padding: 120px 0 30px;
       }
-    }
     .card-content {
       .card-title {
         margin-bottom: 12px;
@@ -664,6 +665,21 @@ nav {
         margin-bottom: 30px;
       }
     }
+     &--white {
+      .card-content {
+        .card-title {
+          color: #FFF;
+        }
+      }
+      .btn-transparent {
+        color: #FFF;
+        border-color: #FFF;
+        &:hover, &:active, &:focus {
+          border-color: $primary-color;
+        }
+      }
+    }
+
   }
 }
 

@@ -18,9 +18,12 @@
 <div class="megawrap">
 <div class="section countries">
   <div class="row">
-    <?php while (have_posts()) : the_post(); ?>
-      <div class="col s6 xl2 ">
-        <div class="card">
+    <?php while (have_posts()) : the_post(); 
+        $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+        $white = get_field('white');
+      ?>
+      <div class="col s6 xl2">
+        <div class="card <?php if($white): ?>card--white<?php endif;?>" style="background-image: url(<?php echo $featured_img_url ?>);">
           <a class="card-link waves-effect waves-light" href="<?php the_permalink();?>">
             <div class="card-content">
               <h3 class="card-title"><?php the_title();?></h3>
