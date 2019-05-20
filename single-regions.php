@@ -16,8 +16,7 @@
           <div class="row">
             <div class="col s12 m12 l6">
               <h1><?php the_title(); ?></h1>
-                <h2><?php echo $leading_paragraph ?></h2>
-                <?php the_content();?>
+              <?php the_content();?>
             </div>
           </div>
           <div class="row">
