@@ -1012,6 +1012,11 @@ nav {
   .small {
     margin-bottom: 12px;
   }
+  .card .card-content {
+    p {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .post-type-archive-regions, .single-regions {
