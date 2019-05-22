@@ -53,7 +53,7 @@
                 <li class="right"><a href="/call-for-proposals" class="btn btn-large btn-tertiary waves-effect waves-light">Call For Proposals</a></li>
               </ul>
 
-              <?php if( get_field('callout')): ?>
+              <?php if( get_field('callout_enabled', 87)): ?>
                   <div class="callout"><?php echo get_field('callout', 87); ?></div>
               <?php endif; ?>
 
