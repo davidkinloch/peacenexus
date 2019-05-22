@@ -7,7 +7,7 @@
 <div class="section no-pad-bot no-margin banner" id="index-banner" style="background-image: url(<?php echo $featured_img_url ?>);">
   <div class="container valign-wrapper">
     <div class="row center">
-      <div class="col s12 m8 offset-m2 light-blue">
+      <div class="col s12 m8 offset-m2 banner__background">
         <div class="banner-center"> 
           <h1 class="white-text"><?php the_title();?></h1>
           <h2 class="white-text"><?php echo $leading_paragraph ;?></h2>

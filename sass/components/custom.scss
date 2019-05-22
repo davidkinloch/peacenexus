@@ -469,6 +469,9 @@ nav {
     position: relative;
     overflow: hidden;
   }
+  &__background {
+    background-color: rgba(92, 136, 161, 0.8);
+  }
   h2 {
     font-size: 1.333rem;
     font-family: $font-stack;
