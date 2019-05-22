@@ -53,7 +53,7 @@ while( have_rows('team_section') ): the_row();
             $position = get_sub_field('position');
             $description = get_sub_field('description');
           ?>
-            <div class="col s12 m6">
+            <div class="col s12 m6 l4">
               <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" class="responsive-img rollover__image">
