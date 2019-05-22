@@ -53,6 +53,10 @@
                 <li class="right"><a href="/call-for-proposals" class="btn btn-large btn-tertiary waves-effect waves-light">Call For Proposals</a></li>
               </ul>
 
+              <?php if( get_field('callout')): ?>
+                  <div class="callout"><?php echo get_field('callout', 87); ?></div>
+              <?php endif; ?>
+
               <ul id="nav-mobile" class="sidenav no-print">
                   <?php  wp_nav_menu_no_ul(); ?>
                   <li class="sidenav-search">
