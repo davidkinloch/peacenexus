@@ -728,12 +728,14 @@ nav {
   }
   .card-action {
     border-top: none;
-    padding: 12px 0 24px;
+    padding: 2px 0 24px;
     height: 128px;
     a {
       margin-top: 12px;
+      display: block;
+      width: fit-content;
       &:first-child {
-       margin-right: 12px;
+      // margin-right: 12px;
       }
     }
   }
