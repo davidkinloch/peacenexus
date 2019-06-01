@@ -646,11 +646,51 @@ nav {
     background: #E1E1E1;
     background-position: center center;
     background-size: cover;
-   
-      .card-link {
-        padding: 120px 0 30px;
-      }
+    .card-link {
+      padding-bottom: 75%;
+    }
     .card-content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(250,250,250,.8);
+    padding: 10px;
+    @media #{$medium-and-up} {
+      padding: 20px;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+    }
+    @media #{$large-and-up} {
+      padding: 12px;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+    }
+    @media #{$extra-large-and-up} {
+      padding: 20px;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+      font-size: 1.067rem;
+      line-height: 1.5;
+      color: #666;
+    }
+    .card-more {
+      border-bottom: 1px solid $primary-color;
+      text-transform: uppercase;
+      font-size: 0.9333rem;
+    }
+    a {
+      border-bottom: 1px solid $primary-color;
+      text-transform: uppercase;
+      font-size: 0.9333rem;
+    }
+  
       .card-title {
         margin-bottom: 12px;
         color: $primary-color;
@@ -668,14 +708,14 @@ nav {
      &--white {
       .card-content {
         .card-title {
-          color: #FFF;
+          //color: #FFF;
         }
       }
       .btn-transparent {
-        color: #FFF;
-        border-color: #FFF;
+        //color: #FFF;
+        //border-color: #FFF;
         &:hover, &:active, &:focus {
-          border-color: $primary-color;
+          //border-color: $primary-color;
         }
       }
     }
