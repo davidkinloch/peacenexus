@@ -58,7 +58,7 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
   <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
   
   <script id="post-template" type="text/x-jQuery-tmpl">
-        <div class="col s6 l4">
+        <div class="col s12 m6 l4">
           <div class="card">
             <div class="card-image">
               <a class="card-link waves-effect waves-block waves-light" href="${permalink}">
