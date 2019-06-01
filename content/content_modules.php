@@ -119,7 +119,13 @@
                 <?php if( have_rows('left_block') ): while ( have_rows('left_block') ) : the_row(); ?>
                   <ul class="links__menu">
                   <?php if( have_rows('links') ): while ( have_rows('links') ) : the_row();  ?>     
-                      <li><a target="_blank" href="<?php echo get_sub_field('link_url');?>"><i class="material-icons">chevron_right</i><?php echo get_sub_field('link_label');?></a></li>
+                      <li>
+                        <?php if ( get_sub_field('link_url') ): ?>
+                          <a target="_blank" href="<?php echo get_sub_field('link_url');?>"><i class="material-icons">chevron_right</i><?php echo get_sub_field('link_label');?></a>
+                        <?php else: ?>
+                          <?php echo get_sub_field('link_label');?>
+                        <?php endif;?>
+                      </li>
                     <?php   endwhile; endif; ?>
                   </ul>
                 <?php endwhile; endif; ?>
@@ -129,7 +135,13 @@
               <?php if( have_rows('middle_block') ): while ( have_rows('middle_block') ) : the_row(); ?>
                 <ul class="links__menu">
                 <?php if( have_rows('links') ): while ( have_rows('links') ) : the_row();  ?>     
-                    <li><a target="_blank" href="<?php echo get_sub_field('link_url');?>"><i class="material-icons">chevron_right</i><?php echo get_sub_field('link_label');?></a></li>
+                    <li>
+                      <?php if ( get_sub_field('link_url') ): ?>
+                        <a target="_blank" href="<?php echo get_sub_field('link_url');?>"><i class="material-icons">chevron_right</i><?php echo get_sub_field('link_label');?></a>
+                      <?php else: ?>
+                        <?php echo get_sub_field('link_label');?>
+                      <?php endif;?>
+                    </li>
                   <?php   endwhile; endif; ?>
                 </ul>
               <?php endwhile; endif; ?>
@@ -138,7 +150,13 @@
               <?php if( have_rows('right_block') ): while ( have_rows('right_block') ) : the_row(); ?>
                 <ul class="links__menu">
                 <?php if( have_rows('links') ): while ( have_rows('links') ) : the_row();  ?>     
-                    <li><a target="_blank" href="<?php echo get_sub_field('link_url');?>"><i class="material-icons">chevron_right</i><?php echo get_sub_field('link_label');?></a></li>
+                    <li>
+                      <?php if ( get_sub_field('link_url') ): ?>
+                        <a target="_blank" href="<?php echo get_sub_field('link_url');?>"><i class="material-icons">chevron_right</i><?php echo get_sub_field('link_label');?></a>
+                      <?php else: ?>
+                        <?php echo get_sub_field('link_label');?>
+                      <?php endif;?>
+                    </li>
                   <?php   endwhile; endif; ?>
                 </ul>
               <?php endwhile; endif; ?>
