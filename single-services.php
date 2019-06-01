@@ -29,7 +29,7 @@
     <div class="megawrap">
       
     <div class="container">
-      <div class="section">
+      <div class="section no-margin">
         <div class="row">
           <div class="col s12">
             <div class="row"> 

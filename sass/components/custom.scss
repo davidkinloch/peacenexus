@@ -1163,7 +1163,11 @@ nav {
     padding: 20px;
     a {
       color: #FFF;
-
+    }
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
   .cms-text {
