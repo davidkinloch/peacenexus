@@ -4,7 +4,7 @@
   $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
   
 ?>
-<div class="section no-pad-bot no-margin banner" id="index-banner" style="background-image: url(<?php echo $featured_img_url ?>);">
+<div class="section no-pad-bot banner" id="index-banner" style="background-image: url(<?php echo $featured_img_url ?>);">
   <div class="container valign-wrapper">
     <div class="row center">
       <div class="col s12 m8 offset-m2 banner__background">
@@ -16,10 +16,10 @@
     </div>
   </div>
 </div>
-<div class="megawrap rellax" data-rellax-speed="9" data-rellax-zindex="1">
-<div class="container">
-  <?php include 'content/content_modules.php'; ?>
-</div><!-- end of container -->
+<div class="megawrap">
+
+<?php include 'content/content_modules.php'; ?>
+
 
 <?php endwhile; endif; ?>
 <?php include 'footer.php'; ?>
