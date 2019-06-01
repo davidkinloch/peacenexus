@@ -69,15 +69,21 @@ Template Name: Calls For Proposal
         <div class="row">
           <div class="col s12 m4">
             <?php echo $og['text']; ?>
-            <a href="<?php echo $og['cta_link']; ?>" class="btn btn-transparent btn-large"><?php echo $og['cta_label']; ?></a>
+            <?php if($og['cta_link']) :?>  
+              <a href="<?php echo $og['cta_link']; ?>" class="btn btn-transparent btn-large"><?php echo $og['cta_label']; ?></a>
+            <?php endif; ?>
           </div>
           <div class="col s12 m4">
             <?php echo $cs['text']; ?>
-            <a href="<?php echo $cs['cta_link']; ?>" class="btn btn-transparent btn-large"><?php echo $cs['cta_label']; ?></a>
+            <?php if($cs['cta_link']) :?> 
+              <a href="<?php echo $cs['cta_link']; ?>" class="btn btn-transparent btn-large"><?php echo $cs['cta_label']; ?></a>
+            <?php endif; ?>
           </div>
           <div class="col s12 m4">
             <?php echo $id['text']; ?>
-            <a href="<?php echo $id['cta_link']; ?>" class="btn btn-transparent btn-large"><?php echo $id['cta_label']; ?></a>
+            <?php if($id['cta_link']) :?> 
+              <a href="<?php echo $id['cta_link']; ?>" class="btn btn-transparent btn-large"><?php echo $id['cta_label']; ?></a>
+            <?php endif; ?>
           </div>
         </div>
       </div>
@@ -126,18 +132,30 @@ Template Name: Calls For Proposal
                 <div class="tab-content__final">
                   <h5>Organisational Development</h5>
                   <div class="cta-block">
-                    <a href="<?php echo $og['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $og['cta_label_2']; ?></a>
-                    <a href="<?php echo $og['cta_link']; ?>" class="btn  waves-effect waves-light"><?php echo $og['cta_label']; ?></a>
+                    <?php if($og['cta_link_2']) :?>   
+                      <a href="<?php echo $og['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $og['cta_label_2']; ?></a>
+                    <?php endif; ?>
+                    <?php if($og['cta_link']) :?>
+                      <a href="<?php echo $og['cta_link']; ?>" class="btn  waves-effect waves-light"><?php echo $og['cta_label']; ?></a>
+                    <?php endif; ?>
                   </div>
                   <h5>Conflict Sensitivity</h5>
                   <div class="cta-block">
-                    <a href="<?php echo $cs['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $cs['cta_label_2']; ?></a>
-                    <a href="<?php echo $cs['cta_link']; ?>" class="btn  waves-effect waves-light"><?php echo $cs['cta_label']; ?></a>
+                    <?php if($cs['cta_link_2']) :?> 
+                      <a href="<?php echo $cs['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $cs['cta_label_2']; ?></a>
+                    <?php endif; ?>
+                    <?php if($cs['cta_link']) :?> 
+                      <a href="<?php echo $cs['cta_link']; ?>" class="btn  waves-effect waves-light"><?php echo $cs['cta_label']; ?></a>
+                    <?php endif; ?>
                   </div>
                   <h5>Inclusive Dialogue with Business</h5>
                   <div class="cta-block">
-                    <a href="<?php echo $id['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $id['cta_label_2']; ?></a>
-                    <a href="<?php echo $id['cta_link']; ?>" class="btn  waves-effect waves-light"><?php echo $id['cta_label']; ?></a>
+                    <?php if($id['cta_link_2']) :?> 
+                      <a href="<?php echo $id['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $id['cta_label_2']; ?></a>
+                    <?php endif; ?>
+                    <?php if($id['cta_link']) :?> 
+                      <a href="<?php echo $id['cta_link']; ?>" class="btn  waves-effect waves-light"><?php echo $id['cta_label']; ?></a>
+                    <?php endif; ?>
                   </div>
               </div>
             </div>
