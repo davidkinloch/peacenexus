@@ -4,6 +4,9 @@
   ?>
      <div class="section no-margin banner banner-text" id="partnername-banner" >
         <div class="container">
+          <div class="cta-block">
+            <?php include 'content/content_categories.php'; ?>
+          </div>
           <div class="row">
             <div class="col s12">
               <a href="/highlights" class="breadcrumb">HIGHLIGHTS</a>
@@ -18,10 +21,7 @@
                 <?php the_content();?>
               </div>
             </div>
-          </div>
-          <div class="cta-block">
-            <?php include 'content/content_categories.php'; ?>
-          </div>
+          </div>   
       </div>
     </div>
     <?php include 'content/content_banner.php'; ?>
