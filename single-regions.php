@@ -3,6 +3,7 @@
     $map = get_field('map');
     $map_text = get_field('post_map_text');
     $leading_paragraph = get_field('leading_paragraph');
+    $rightColumn = get_field('hero_right_text');
   ?>
      <div class="section banner banner-text" id="region-specific-banner">
         <img class="map" src="<?php echo $map['url'] ?>" alt="<?php echo $map['alt'] ?>" >
@@ -21,11 +22,20 @@
             </div>
           </div>
           <div class="row">
-            <div class="col s12">
-               <div class="text-column">
-                  <?php echo $map_text ?>
-               </div>
-            </div>
+            <?php if ( $rightColumn ): ?>
+              <div class="col s12 m6">
+                <?php echo $map_text ?>
+              </div>
+              <div class="col s12 m6">
+                <?php echo $rightColumn ?>
+              </div>
+            <?php else: ?>
+              <div class="col s12">
+                 <div class="text-column">
+                    <?php echo $map_text ?>
+                 </div>
+              </div>
+            <?php endif;?>
           </div>
         </div>
       </div>

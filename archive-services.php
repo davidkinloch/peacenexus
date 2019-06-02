@@ -1,15 +1,31 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()) : ?>
+<?php if (have_posts()) : 
+  $rightColumn = get_field('hero_right_text', 92);
+?>
 <div class="section banner banner-text" id="region-banner" >
   <div class="container">
     <div class="row">
-      <div class="col s12">
-        <h1><?php echo get_the_title(92);?></h1>
-        <div class="text-column">
-          <h2><?php echo get_field('leading_paragraph',92);?></h2>
-        </div>
-      </div>
+      <?php if ( $rightColumn ): ?>
+          <div class="col s12">
+            <h1><?php echo get_the_title(92); ?></h1>
+          </div>
+          <div class="col s12 m6">
+            <h2><?php echo get_field('leading_paragraph',92);?></h2>
+            <p><?php echo get_the_content(92);?></p>
+          </div>
+          <div class="col s12 m6">
+            <?php echo $rightColumn ?>
+          </div>
+        <?php else: ?>
+          <div class="col s12">
+            <h1><?php echo get_the_title(92);?></h1>
+            <div class="text-column">
+              <h2><?php echo get_field('leading_paragraph',92);?></h2>
+              <p><?php echo get_the_content(92);?></p>
+            </div>
+          </div>
+        <?php endif;?>
     </div>
   </div>
 </div>
