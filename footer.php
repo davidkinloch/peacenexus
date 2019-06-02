@@ -3,6 +3,8 @@
       <div class="row noprint">
         <div class="col s12 m3">
            <ul>
+            <li>Route de Lausanne 107</li>
+            <li>1197 Prangins, Switzerland</li>
             <li><span><span class="tel" itemprop="telephone">+41 22 365 1500</span></span></li>
             <li><a href="mailto:info@peacenexus.org" class="email" itemprop="email">info@peacenexus.org</a></li>
           </ul>
