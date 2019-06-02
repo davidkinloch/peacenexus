@@ -71,7 +71,7 @@ while( have_rows('team_section') ): the_row();
                     </div>
                   </div>
                   <div class="card-action">
-                    <a href="#" class="readmore"></a>
+                    <a href="#" class="readmore btn btn-transparent"></a>
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ while( have_rows('team_section') ): the_row();
                     </div>
                   </div>
                   <div class="card-action">
-                    <a href="#" class="readmore"></a>
+                    <a href="#" class="readmore btn btn-transparent"></a>
                   </div>
                 </div>
               </div>

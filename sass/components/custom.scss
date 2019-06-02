@@ -1164,8 +1164,8 @@ nav {
   &--blue {
     .col {
       background-color: $tertiary-color;
-    color: #FFF;
-    padding: 20px;
+      color: #FFF;
+      padding: 20px;
     }
     a {
       color: #FFF;
@@ -1226,7 +1226,11 @@ nav {
       overflow: hidden;
     }
     .readmore:before {
-      content: "Less...";
+      content: "Close";
     }
+  }
+  .btn-transparent:focus {
+    background: transparent;
+    color: $primary-color;
   }
 }
