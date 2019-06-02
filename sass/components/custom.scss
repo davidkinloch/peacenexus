@@ -1216,7 +1216,7 @@ nav {
     padding: 0 24px 16px;
   }
   .readmore:before {
-    content: "Read more...";
+    content: "Read more";
   }
   &.active {
     .description {
@@ -1232,5 +1232,29 @@ nav {
   .btn-transparent:focus {
     background: transparent;
     color: $primary-color;
+  }
+}
+.cms-text {
+  .aboutnav {
+    list-style: none;
+    margin-top: 0;
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px;
+    }
+    a {
+      color: $primary-color;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-bottom: 4px solid transparent;
+      padding-bottom: 4px;
+      margin-bottom: 4px;
+      transition: all .3s ease-in;
+      &:hover {
+        border-color: $primary-color;
+      }
+    }
   }
 }
