@@ -1088,6 +1088,10 @@ nav {
   margin-bottom: 20px !important;
 }
 
+.megawrap.rellax {
+  background: #FFF;
+  width: 100%;
+}
 .megawrap.rellax > .container {
   background: #FFF;
   padding-top: 0px important;
@@ -1107,7 +1111,7 @@ nav {
 .home .megawrap.rellax > .container {
   padding-top: 20px;
    @media #{$medium-and-up} {
-    padding-top: 70px;
+   // padding-top: 70px;
   }
 }
 
