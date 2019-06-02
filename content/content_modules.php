@@ -219,7 +219,7 @@
       ?>
       <div class="section cms_content cms_content--blue">
         <div class="row">
-          <div class="col s12">
+          <div class="col s12 m10 offset-m1">
             <div class="cms-text">
               <?php echo $embed_code ;?>
             </div>

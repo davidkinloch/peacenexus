@@ -14,7 +14,7 @@
             </div>
           </div>
           <div class="row no-margin">
-            <div class="col s12">
+            <div class="col s12 m10 offset-m1">
               <?php if ($leading_paragraph): ?>
                 <h1><?php the_title(); ?></h1>
                 <h2><?php echo $leading_paragraph ;?></h2>
@@ -31,7 +31,7 @@
     <div class="container">
       <div class="section no-margin">
         <div class="row">
-          <div class="col s12">
+          <div class="col s12 m10 offset-m1">
             <div class="row"> 
               <div class="col s12 cms-text">
                 <?php the_content(); ?>
