@@ -56,17 +56,19 @@ while( have_rows('team_section') ): the_row();
               $description = get_sub_field('description');
             ?>
             
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
+              <div class="row card">
+                <div class="card-image col s12 l4 waves-effect waves-block waves-light">
                   <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" class="responsive-img rollover__image">
                 </div>
-                <div class="card-content">
-                  <h5 class="small"><?php echo $position ?></h5>
-                  <h3 class="card-title"><?php echo $name ?></h3>
-                  <?php echo $description ?>
-                </div>
-                <div class="card-action">
-                  <a href="#" class="readmore"></a>
+                <div class="col s12 l8">
+                  <div class="card-content">
+                    <h5 class="small"><?php echo $position ?></h5>
+                    <h3 class="card-title"><?php echo $name ?></h3>
+                    <?php echo $description ?>
+                  </div>
+                  <div class="card-action">
+                    <a href="#" class="readmore"></a>
+                  </div>
                 </div>
               </div>
           <?php endwhile; ?>
@@ -80,11 +82,11 @@ while( have_rows('team_section') ): the_row();
               $position = get_sub_field('position');
               $description = get_sub_field('description');
             ?>
-              
-                <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" class="responsive-img rollover__image">
-                  </div>
+              <div class="row card">
+                <div class="card-image col s12 l4 waves-effect waves-block waves-light">
+                  <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" class="responsive-img rollover__image">
+                </div>
+                <div class="col s12 l8">
                   <div class="card-content">
                     <h5 class="small"><?php echo $position ?></h5>
                     <h3 class="card-title"><?php echo $name ?></h3>
@@ -94,6 +96,7 @@ while( have_rows('team_section') ): the_row();
                     <a href="#" class="readmore"></a>
                   </div>
                 </div>
+              </div>
             
             <?php endwhile;?>
           </div>
