@@ -53,6 +53,7 @@ while( have_rows('team_section') ): the_row();
               $image = get_sub_field('image');
               $name = get_sub_field('name');
               $position = get_sub_field('position');
+              $synposis = get_sub_field('synposis');
               $description = get_sub_field('description');
             ?>
             
@@ -64,7 +65,10 @@ while( have_rows('team_section') ): the_row();
                   <div class="card-content">
                     <h5 class="small"><?php echo $position ?></h5>
                     <h3 class="card-title"><?php echo $name ?></h3>
-                    <?php echo $description ?>
+                    <?php echo $synposis ?>
+                    <div class="description">  
+                      <?php echo $description ?>
+                    </div>
                   </div>
                   <div class="card-action">
                     <a href="#" class="readmore"></a>
@@ -80,6 +84,7 @@ while( have_rows('team_section') ): the_row();
               $image = get_sub_field('image');
               $name = get_sub_field('name');
               $position = get_sub_field('position');
+              $synposis = get_sub_field('synposis');
               $description = get_sub_field('description');
             ?>
               <div class="row card">
@@ -90,7 +95,10 @@ while( have_rows('team_section') ): the_row();
                   <div class="card-content">
                     <h5 class="small"><?php echo $position ?></h5>
                     <h3 class="card-title"><?php echo $name ?></h3>
-                    <?php echo $description ?>
+                    <?php echo $synposis ?>
+                    <div class="description">  
+                      <?php echo $description ?>
+                    </div>
                   </div>
                   <div class="card-action">
                     <a href="#" class="readmore"></a>

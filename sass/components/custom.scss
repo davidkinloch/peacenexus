@@ -1204,12 +1204,25 @@ nav {
     border-bottom: 10px solid #FFF;
     padding: 0 24px;
   }
+  .description {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all .3s ease-in;
+  }
+  .card-action {
+    border-color: transparent;
+  }
   .readmore:before {
     content: "Read more...";
   }
   &.active {
-    .card-content {
+    .description {
       height: auto;
+      opacity: 1;
+      visibility: visible;
+      overflow: hidden;
     }
     .readmore:before {
       content: "Less...";
