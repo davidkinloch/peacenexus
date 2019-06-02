@@ -13,6 +13,7 @@ Template Name: Calls For Proposal
     <div class="row">
       <div class="col s12 m6">
         <h1><?php the_title(); ?></h1>
+        <h2><?php echo get_field('callout'); ?></h2>
       </div>
       <div class="col s12 m6">
         <h2><?php echo $leading_paragraph ;?></h2>
