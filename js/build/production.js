@@ -27,6 +27,11 @@ c[b].top+r)/(c[b].height+r),c[b].speed);var e=d.y-c[b].baseY,g=d.x-c[b].baseX;nu
        $( ".item-search .input-field" ).removeClass('active');
       });
 
+    $('.teamgrid .readmore').click(function(e) {
+        e.preventDefault();
+       $( this ).parents('.card').toggleClass( "active" );
+      });
+
      var rellax = new Rellax('.rellax');
 
     $('.lang-switch select').change(function(){

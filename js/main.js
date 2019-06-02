@@ -18,6 +18,11 @@
        $( ".item-search .input-field" ).removeClass('active');
       });
 
+    $('.teamgrid .readmore').click(function(e) {
+        e.preventDefault();
+       $( this ).parents('.card').toggleClass( "active" );
+      });
+
      var rellax = new Rellax('.rellax');
 
     $('.lang-switch select').change(function(){

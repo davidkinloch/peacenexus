@@ -1191,3 +1191,23 @@ nav {
 .wp-block-image {
   margin-top: 0;
 }
+
+
+.teamgrid .card {
+  .card-content {
+    height: 194px;
+    overflow: hidden;
+    border-bottom: 10px solid #FFF;
+  }
+  .readmore:before {
+    content: "Read more...";
+  }
+  &.active {
+    .card-content {
+      height: auto;
+    }
+    .readmore:before {
+      content: "Less...";
+    }
+  }
+}
