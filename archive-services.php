@@ -12,7 +12,6 @@
           </div>
           <div class="col s12 m6">
             <h2><?php echo get_field('leading_paragraph',92);?></h2>
-            <p><?php echo get_the_content(92);?></p>
           </div>
           <div class="col s12 m6">
             <?php echo $rightColumn ?>
@@ -22,7 +21,6 @@
             <h1><?php echo get_the_title(92);?></h1>
             <div class="text-column">
               <h2><?php echo get_field('leading_paragraph',92);?></h2>
-              <p><?php echo get_the_content(92);?></p>
             </div>
           </div>
         <?php endif;?>
