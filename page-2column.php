@@ -30,12 +30,14 @@ Template Name: 2 Column
         <div class="row">
           <div class="col s12">
             <div class="row"> 
-              <div class="col s12 m8 cms-text">
-                <?php the_content(); ?>
-              </div>
-              <div class="col s12 m4 cms-text">
+              <div class="col s12 m4 push-m8 cms-text">
                 <?php echo $sidebar ;?>
               </div>
+
+              <div class="col s12 m8 pull-m4 cms-text">
+                <?php the_content(); ?>
+              </div>
+
             </div>
           </div>
         </div>
