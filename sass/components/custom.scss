@@ -324,10 +324,10 @@ nav {
     li {
       position: relative;
     }
-    li:hover > ul {
+    li:hover > .sub-menu {
     display: block;
     }
-    ul {
+    .sub-menu {
     display: none;
     position: absolute;
     top: 44px;
@@ -340,14 +340,14 @@ nav {
         left: 17px;
      }
     }
-    ul li {
+    .sub-menu li {
       float: none;
       &.current-menu-item a {
         background-color: rgba(0,0,0,0.05);
         border-color: transparent;
       } 
     }
-    ul li a {
+    .sub-menu li a {
       padding: 0 6px;
       margin: 0;
       text-align: center;
