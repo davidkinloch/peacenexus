@@ -41,7 +41,7 @@
     </div>
     <?php include 'content/content_banner.php'; ?>
 
-    <div class="megawrap rellax" data-rellax-speed="5" data-rellax-zindex="1">
+    <div class="megawrap rellax" data-rellax-speed="2" data-rellax-zindex="1">
       <?php include 'content/content_modules.php'; ?>
 
   <?php endwhile; endif; ?>
