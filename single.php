@@ -24,7 +24,7 @@
                 <?php the_content();?>
               </div>
               <div class="col s12 m6">
-                <?php echo $rightColumn ?>
+                <?php echo $rightColumn ?>  
               </div>
             <?php else: ?>
               <div class="col s12">
@@ -41,7 +41,7 @@
     </div>
     <?php include 'content/content_banner.php'; ?>
 
-    <div class="megawrap rellax" data-rellax-speed="3" data-rellax-zindex="1">
+    <div class="megawrap rellax" data-rellax-speed="5" data-rellax-zindex="1">
       <?php include 'content/content_modules.php'; ?>
 
   <?php endwhile; endif; ?>
