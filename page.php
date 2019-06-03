@@ -6,7 +6,7 @@
      <div class="section half-margin banner banner-text" id="partnername-banner" >
         <div class="container">
           <div class="row no-margin">
-            <div class="col s12 m8 offset-m2">
+            <div class="col s12 m10 offset-m1">
               <?php if ($leading_paragraph): ?>
                 <h1><?php the_title(); ?></h1>
                 <h2><?php echo $leading_paragraph ;?></h2>

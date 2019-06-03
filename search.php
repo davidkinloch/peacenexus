@@ -18,7 +18,7 @@
           <div class="row">
             <div class="col s12">
               <div class="row"> 
-                <div class="col s12 m8 offset-m2">
+                <div class="col s12 m10 offset-m1">
               
                 <?php if ( have_posts() ) : ?>
                   <ul class="searchresults">
