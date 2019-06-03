@@ -1210,6 +1210,9 @@ nav {
   .card {
     margin-bottom: 30px;
     padding-bottom: 30px;
+    .card-image {
+      margin-bottom: 20px;
+    }
     .card-content {
       overflow: hidden;
       padding: 0 24px;

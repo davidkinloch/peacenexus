@@ -57,7 +57,7 @@ while( have_rows('team_section') ): the_row();
               $description = get_sub_field('description');
             ?>
             
-              <div class="row card" id="<?php echo str_replace(' ', '', $name); ?>">
+              <div class="row card" id="<?php $page_link = sanitize_title_for_query( $name ); echo str_replace(' ', '', $page_link); ?>">
                 <div class="card-image col s12 l4 waves-effect waves-block waves-light">
                   <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" class="responsive-img rollover__image">
                 </div>
@@ -87,7 +87,8 @@ while( have_rows('team_section') ): the_row();
               $synopsis = get_sub_field('synopsis');
               $description = get_sub_field('description');
             ?>
-              <div class="row card" id="<?php echo str_replace(' ', '', $name); ?>">
+            
+              <div class="row card" id="<?php $page_link = sanitize_title_for_query( $name ); echo str_replace(' ', '', $page_link); ?>">
                 <div class="card-image col s12 l4 waves-effect waves-block waves-light">
                   <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" class="responsive-img rollover__image">
                 </div>
