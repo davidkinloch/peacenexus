@@ -1202,39 +1202,47 @@ nav {
   margin: 20px auto;
 }
 
-.teamgrid .card {
-  .card-content {
-    overflow: hidden;
-    padding: 0 24px;
+.teamgrid {
+  h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
   }
-  .description {
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    transition: all .3s ease-in;
-  }
-  .card-action {
-    border-color: transparent;
-    padding: 0 24px 16px;
-  }
-  .readmore:before {
-    content: "Read more";
-  }
-  &.active {
-    .description {
-      height: auto;
-      opacity: 1;
-      visibility: visible;
+  .card {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    .card-content {
       overflow: hidden;
+      padding: 0 24px;
+    }
+    .description {
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transition: all .3s ease-in;
+    }
+    .card-action {
+      border-color: transparent;
+      padding: 0 24px 16px;
     }
     .readmore:before {
-      content: "Close";
+      content: "Read more";
     }
-  }
-  .btn-transparent:focus {
-    background: transparent;
-    color: $primary-color;
+    &.active {
+      .description {
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        overflow: hidden;
+      }
+      .readmore:before {
+        content: "Close";
+      }
+    }
+    .btn-transparent:focus {
+      background: transparent;
+      color: $primary-color;
+    }
   }
 }
 .cms-text {
