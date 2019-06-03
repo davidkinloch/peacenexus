@@ -36,7 +36,7 @@
         $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
         $white = get_field('white');
       ?>
-        <div class="col s6 l4 <?php if($postCount == 4) { ?>offset-s3<?php } ?>">
+        <div class="col s12 m6 l4 <?php if($postCount == 4) { ?>offset-m3<?php } ?>">
           <div class="card <?php if($white): ?>card--white<?php endif;?>" style="background-image: url(<?php echo $featured_img_url ?>);">
             <a class="card-link waves-effect waves-light" href="<?php the_permalink();?>"> 
               <div class="card-content">
