@@ -68,7 +68,7 @@ Template Name: Calls For Proposal
     <div class="row tab-content">
       <div id="focus-1" class="col s12">
         <div class="row">
-          <div class="col s12 hide-on-large-only">
+          <div class="col s12 hide-on-large-only no-margin">
             <h3 class="blue-text">What We Support</h3>
           </div>
           <div class="col s12 m4">
