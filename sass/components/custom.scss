@@ -277,9 +277,12 @@ h1 {
     }
   }
   .sidenav .input-field input[type=search] {
-    padding-left: 5em;
+   padding-left: 4rem;
     &::placeholder {
-      color: #FFF;
+      color: $link-color;
+    }
+    &:focus {
+      color: $primary-color;
     }
   }
 }

@@ -62,7 +62,7 @@
                   <li class="sidenav-search">
                     <form action="/" method="get">
                       <div class="input-field">
-                        <input type="search" name="s" id="search" value="<?php the_search_query(); ?>"  required>
+                        <input type="search" placeholder="Search Site..." name="s" id="search" value="<?php the_search_query(); ?>"  required>
                         <label class="label-icon" for="search"><i class="material-icons material-icons--search">search</i></label>
                         <i class="material-icons search-close">close</i>
                       </div>
