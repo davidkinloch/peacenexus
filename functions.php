@@ -1,11 +1,8 @@
 <?php
 
-function my_init()   
-{  
-    if (!is_admin())   
-    {  
+add_action( 'wp_enqueue_scripts', function(){
         wp_deregister_script('jquery');  
-  
+        if (is_admin()) return; // don't dequeue on the backend
         // Load a copy of jQuery from the Google API CDN  
         // The last parameter set to TRUE states that it should be loaded  
         // in the footer.  
@@ -14,9 +11,7 @@ function my_init()
         wp_enqueue_script('jquery');
         wp_enqueue_script('materialize', '//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js', FALSE, '1.11.0', TRUE);  
         wp_enqueue_script( 'production.min', get_template_directory_uri() . '/js/build/production.min.js', array(), '1.0.0', true );
-    }  
-}  
-add_action('init', 'my_init');
+});
 
 
 // menu

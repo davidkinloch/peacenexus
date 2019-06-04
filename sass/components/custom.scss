@@ -885,13 +885,16 @@ nav {
       span {
         text-transform: capitalize;
         color: #E7E7E7;
+        font-family: $font-special;
+        font-weight: 600;
+        font-size: 1.4rem;
         @media #{$large-and-up} {
           display: none;
         }
       }
       &.active {
         span {
-          color: #797979;
+          color: $primary-color;
         }
         h3 {
           color: $primary-color;
