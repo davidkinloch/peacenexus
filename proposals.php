@@ -101,7 +101,7 @@ Template Name: Calls For Proposal
       <div id="focus-2" class="col s12">
         <div class="row">
          <div class="col s12 m6 l6 offset-l3">
-            <h3 class="hide-on-large-only blue-text">How to Prepare</h3>
+            <h3 class="hide-on-large-only blue-text">Are You Eligible?</h3>
             <?php echo $step_2['main_text']; ?>
           </div>
         </div>
@@ -110,7 +110,7 @@ Template Name: Calls For Proposal
       <div id="focus-3" class="col s12">
         <div class="row"> 
          <div class="col s12 m6 l6 offset-l3">
-            <h3 class="hide-on-large-only blue-text">Apply Here</h3>
+            <h3 class="hide-on-large-only blue-text">How to Prepare</h3>
             <?php echo $step_3['main_text']; ?>
           </div>
         </div>
