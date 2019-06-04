@@ -29,25 +29,25 @@ Template Name: Calls For Proposal
       <ul id="tabs-focus" class="tabs">
         <li class="tab col s3">
           <a class="active" href="#focus-1">
-            <span>Step One</span>
+            <span>1</span>
             <h3>1. What We Support</h3>
           </a>
         </li>
         <li class="tab col s3">
           <a href="#focus-2">
-            <span>Step Two</span>
+            <span>2</span>
             <h3>2. Are You Eligible?</h3>
           </a>
         </li>
         <li class="tab col s3">
           <a href="#focus-3">
-            <span>Step Three</span>
+            <span>3</span>
             <h3>3. How to Prepare</h3>
           </a>
         </li>
         <li class="tab col s3">
           <a href="#focus-4">
-            <span>Step Four</span>
+            <span>4</span>
             <h3>4. Apply Here</h3>
           </a>
         </li>
@@ -68,6 +68,9 @@ Template Name: Calls For Proposal
     <div class="row tab-content">
       <div id="focus-1" class="col s12">
         <div class="row">
+          <div class="col s12 hide-on-large-only">
+            <h3 class="blue-text">What We Support</h3>
+          </div>
           <div class="col s12 m4">
             <?php echo $og['text']; ?>
             <?php if($og['cta_link']) :?>  
@@ -98,6 +101,7 @@ Template Name: Calls For Proposal
       <div id="focus-2" class="col s12">
         <div class="row">
          <div class="col s12 m6 l6 offset-l3">
+            <h3 class="hide-on-large-only blue-text">How to Prepare</h3>
             <?php echo $step_2['main_text']; ?>
           </div>
         </div>
@@ -106,6 +110,7 @@ Template Name: Calls For Proposal
       <div id="focus-3" class="col s12">
         <div class="row"> 
          <div class="col s12 m6 l6 offset-l3">
+            <h3 class="hide-on-large-only blue-text">What We Support</h3>
             <?php echo $step_3['main_text']; ?>
           </div>
         </div>
@@ -124,6 +129,7 @@ Template Name: Calls For Proposal
       <div id="focus-4" class="col s12">
         <div class="row">
           <div class="col s12 l6">
+            <h3 class="hide-on-large-only blue-text">Apply Here</h3>
             <?php echo $main_text; ?>
           </div>
 
