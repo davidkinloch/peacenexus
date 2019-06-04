@@ -110,7 +110,7 @@ Template Name: Calls For Proposal
       <div id="focus-3" class="col s12">
         <div class="row"> 
          <div class="col s12 m6 l6 offset-l3">
-            <h3 class="hide-on-large-only blue-text">What We Support</h3>
+            <h3 class="hide-on-large-only blue-text">Apply Here</h3>
             <?php echo $step_3['main_text']; ?>
           </div>
         </div>
