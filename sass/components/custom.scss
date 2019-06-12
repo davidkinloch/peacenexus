@@ -1172,10 +1172,11 @@ nav {
 
 .cms_content {
   &--blue {
+    padding: 0 .75rem;
     .col {
       background-color: $tertiary-color;
       color: #FFF;
-      padding: 20px;
+      padding: 0 20px 20px;
     }
     a {
       color: #FFF;
