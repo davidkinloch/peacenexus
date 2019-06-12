@@ -777,8 +777,7 @@ nav {
     height: 128px;
     a {
       margin-top: 12px;
-      display: block;
-      width: fit-content;
+      display: table;
       &:first-child {
       // margin-right: 12px;
       }

@@ -18,22 +18,6 @@ Template Name: Team Page
 </div>
 
 <div class="container">
-  <!-- KILL
-  <div class="row">
-    <div class="col s12">
-        <a class='dropdown-trigger btn btn-large btn-filter' href='#' data-target='dropdown-team'><i class="material-icons right">keyboard_arrow_down</i> Filter by Department</a>
-        
-        <ul id='dropdown-team' class='dropdown-content'>
-          <li><a href="#!">Directors</a></li>
-          <li><a href="#!">Project Management</a></li>
-          <li><a href="#!">Consultants</a></li>
-          <li><a href="#!">Marketing</a></li>
-          <li><a href="#!">Finance &amp; Supprt</a></li>
-          <li><a href="#!">View All</a></li>
-        </ul>
-      </div>
-  </div>
-  -->
 
 <?php
 if( have_rows('team_section') ):
