@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); 
   $leading_paragraph = get_field('leading_paragraph');
   $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
@@ -22,4 +22,4 @@
 
 
 <?php endwhile; endif; ?>
-<?php include 'footer.php'; ?>
+<?php get_footer(); ?>
