@@ -65,7 +65,7 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
                 <img src="${thumbnail}" class="responsive-img"  alt="${title}">
                 <div class="card-content">
                   <h3 class="small">${title}</h3>
-                  <p>${leading_paragraph}</p>
+                  
                   <span class="card-more">READ MORE</span>
                 </div>
               </a>

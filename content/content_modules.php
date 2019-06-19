@@ -35,7 +35,7 @@
                     <img src="<?php echo get_the_post_thumbnail_url($post_id_1) ;?>" class="responsive-img"  alt="<?php echo get_the_title($post_id_1); ?>">
                     <div class="card-content">
                       <h3 class="small"><?php echo get_the_title($post_id_1); ?></h3>
-                      <p><?php echo get_field('leading_paragraph', $post_id_1); ?></p>
+                      
                       <span class="card-more">READ MORE</span>
                     </div>
                   </a>
@@ -58,7 +58,7 @@
                     <img src="<?php echo get_the_post_thumbnail_url($post_id_2) ;?>" class="responsive-img"  alt="<?php echo get_the_title($post_id_2); ?>">
                     <div class="card-content">
                       <h3 class="small"><?php echo get_the_title($post_id_2); ?></h3>
-                      <p><?php echo get_field('leading_paragraph', $post_id_2); ?></p>
+                      
                       <span class="card-more">READ MORE</span>
                     </div>
                   </a>
@@ -81,7 +81,7 @@
                     <img src="<?php echo get_the_post_thumbnail_url($post_id_3) ;?>" class="responsive-img"  alt="<?php echo get_the_title($post_id_3); ?>">
                     <div class="card-content">
                       <h3 class="small"><?php echo get_the_title($post_id_3); ?></h3>
-                      <p><?php echo get_field('leading_paragraph', $post_id_3); ?></p>
+                     
                       <span class="card-more">READ MORE</span>
                     </div>
                   </a>
