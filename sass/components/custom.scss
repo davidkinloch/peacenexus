@@ -1292,8 +1292,10 @@ nav {
 }
 
 .page-template-default {
-  .section {
-    margin-bottom: 0;
-    padding-bottom: 0;
+  .megawrap {
+    .section {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
   }
 }
