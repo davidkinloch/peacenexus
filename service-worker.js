@@ -1,5 +1,3 @@
-
-    
 var dataCacheName = 'peacenexus';
 var cacheName = 'peacenexus';
 var filesToCache = [
