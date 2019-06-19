@@ -4,13 +4,12 @@ var dataCacheName = 'peacenexus';
 var cacheName = 'peacenexus';
 var filesToCache = [
   '/',
- "./index.php",
- "./manifest.json",
- "./js/build/production.min.js",
- "./js/vendor/jquery-2.1.1.min.js",
- "./service-worker.js",
- "./css/materialize.css",
- "./assets/src/LogoPN.png"
+ "/wp-content/themes/peacenexus/manifest.json",
+ "/wp-content/themes/peacenexus/js/build/production.min.js",
+ "/wp-content/themes/peacenexus/js/vendor/jquery-2.1.1.min.js",
+ "/wp-content/themes/peacenexus/service-worker.js",
+ "/wp-content/themes/peacenexus/css/materialize.css",
+ "/wp-content/themes/peacenexus/assets/build/LogoPN10.svg"
 ];
 
 // Listen to installation event

@@ -46,12 +46,12 @@ c[b].top+r)/(c[b].height+r),c[b].speed);var e=d.y-c[b].baseY,g=d.x-c[b].baseX;nu
           window.location = url;
       });
 
-/*
+
  if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-   .register('./service-worker.js')
+   .register('/wp-content/themes/peacenexus/service-worker.js')
    .then(function() { console.log('Service Worker Registered'); });
   }
-*/
+
 
 })(jQuery); // end of jQuery name space
