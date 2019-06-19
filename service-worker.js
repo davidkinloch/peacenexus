@@ -4,7 +4,6 @@ var dataCacheName = 'peacenexus';
 var cacheName = 'peacenexus';
 var filesToCache = [
   '/',
- "/wp-content/themes/peacenexus/manifest.json",
  "/wp-content/themes/peacenexus/js/build/production.min.js",
  "/wp-content/themes/peacenexus/js/vendor/jquery-2.1.1.min.js",
  "/wp-content/themes/peacenexus/service-worker.js",
