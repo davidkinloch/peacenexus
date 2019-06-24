@@ -5,18 +5,18 @@
   
 ?>
 <div class="section no-pad-bot banner" id="index-banner" style="background-image: url(<?php echo $featured_img_url ?>);">
-  <div class="container valign-wrapper">
-    <div class="row center">
-      <div class="col s12 m8 offset-m2 banner__background">
-        <div class="banner-center"> 
-          <h1 class="white-text"><?php the_title();?></h1>
-          <h2 class="white-text"><?php echo $leading_paragraph ;?></h2>
-        </div>
+</div>
+<div class="section no-pad-bot">
+  <div class="container ">
+    <div class="row no-margin center">
+      <div class="col s12 m8 offset-m2">
+        <h1 class="blue-text"><?php the_title();?></h1>
+        <h2 class="blue-text no-margin"><?php echo $leading_paragraph ;?></h2>
       </div>
     </div>
   </div>
 </div>
-<div class="megawrap rellax" data-rellax-speed="10" >
+<div class="megawrap">
 
 <?php include 'content/content_modules.php'; ?>
 

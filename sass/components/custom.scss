@@ -543,8 +543,13 @@ nav {
   }
 }
 
-#index-banner {
-  //background-attachment: fixed;
+.home {
+  h1 {
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-weight: 400;
+  }
 }
 #highlights-banner {
   background: transparent;
