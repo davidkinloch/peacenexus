@@ -4,7 +4,7 @@ Template Name: Highlights
 */
 ); 
 $regions = get_categories(array('orderby' => 'name', 'parent' => 3 ));
-$services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
+$services = get_terms( 'post_tag', array('orderby' => 'name' ));
 ?>
 <?php if (have_posts()) : ?>
 <div class="section banner banner-text" id="highlights-banner" >
@@ -20,18 +20,18 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
 <div class="megawrap">
 <div class="container">
   <div class="section filter">
-    <div class="row filter-btns">
+    <div id="region-tags" class="row filter-btns">
       <div class="col s12 m10">
     <?php foreach($regions as $region) {  ?>
-        <a data-id="<?=$region->cat_ID?>" id="category-<?=$region->slug?>" class="region-filter category-filter btn btn-secondary btn-transparent waves-effect waves-light" href="#"><?=$region->cat_name?> <i class="material-icons right">clear</i></a>
+        <a data-id="<?=$region->cat_ID?>" id="category-<?=$region->slug?>" class="region-filter category-filter btn btn-secondary btn-transparent waves-effect waves-light" href="#"><?=$region->cat_name?> <i class="material-icons right">add</i></a>
     <?php } ?>
         <a id="region-all" class="btn btn-secondary btn-transparent waves-effect waves-light" href="#">Show All Regions</a>
       </div>
     </div>
-    <div class="row filter-btns">
+    <div id="service-tags" class="row filter-btns">
       <div class="col s12 m10 l9">
     <?php foreach($services as $service) { ?>
-        <a data-id="<?=$service->cat_ID?>" id="category-<?=$service->slug?>" class="service-filter category-filter btn btn-primary btn-transparent waves-effect waves-light" href="#"><?=$service->cat_name?> <i class="material-icons right">clear</i></a>
+        <a data-id="<?=$service->term_id?>" id="category-<?=$service->slug?>" class="service-filter category-filter btn btn-primary btn-transparent waves-effect waves-light" href="#"><?=$service->name?> <i class="material-icons right">add</i></a>
     <?php } ?>
         <a id="service-all" class="btn btn-primary btn-transparent waves-effect waves-light" href="#">Show All Services</a>
       </div>
@@ -71,8 +71,8 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
               </a>
             </div>
             <div class="card-action">
-          <a class="btn btn-secondary waves-effect waves-light" href="https://pnwp.dkinloch.com/highlights?id=${region_slug}" alt="View all posts in ${region_name}">${region_name}</a>
-          <a class="btn waves-effect waves-light" href="https://pnwp.dkinloch.com/highlights?id=${service_slug}" alt="View all posts in ${service_name}">${service_name}</a>        
+          <a class="btn btn-secondary waves-effect waves-light" href="/highlights?id=${region_slug}" alt="View all posts in ${region_name}">${region_name}</a>
+          <a class="btn waves-effect waves-light" href="/highlights?id=${service_slug}" alt="View all posts in ${service_name}">${service_name}</a>        
             </div>
           </div>
         </div>    
@@ -103,7 +103,7 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
         document.getElementById('category-' + id).click();
       }, 100);
     } else {
-    $('.category-filter').toggleClass('btn-filter-selected'); 
+        $('.category-filter').toggleClass('btn-filter-selected'); 
         getPosts();
   }
 
@@ -135,12 +135,16 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
       })
 
     function getPosts() {
-      var ids = [];
-      $('.btn-filter-selected').each(function () {
-          ids.push($(this).attr('data-id'));
+      var regions = [];
+      $('#region-tags .btn-filter-selected').each(function () {
+        regions.push($(this).attr('data-id'));
+      });
+      var services = [];
+      $('#service-tags .btn-filter-selected').each(function () {
+        services.push($(this).attr('data-id'));
       });
     $("#post-container").empty();
-        if (ids.length == 0) {
+        if (regions.length == 0 && services.length == 0) {
       $("#no-posts-containter").show();
     } else {
       $("#no-posts-containter").hide();
@@ -148,7 +152,8 @@ $services = get_categories(array('orderby' => 'name', 'parent' => 9 ));
         method: "POST",
         url: "/wp-json/api/posts",
         data: { 
-          ids: ids,
+          regions: regions,
+          services: services,
           sort: sort
         }
       })
