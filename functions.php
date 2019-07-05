@@ -56,7 +56,8 @@ function revcon_change_post_label() {
     $menu[5][0] = 'Highlights';
     $submenu['edit.php'][5][0] = 'Highlights';
     $submenu['edit.php'][10][0] = 'New Highlight';
-    $submenu['edit.php'][16][0] = 'Highlights Tags';
+    $submenu['edit.php'][15][0] = 'Regions';
+    $submenu['edit.php'][16][0] = 'Services';
     echo '';
 }
 function revcon_change_post_object() {
@@ -321,7 +322,8 @@ function sortByDate($first, $second) {
 function get_category_posts() {
 	$args = [
 		'numberposts' => -1, 
-		'category' => $_POST['ids'],
+        'category' => $_POST['regions'],
+        'tag__in' => $_POST['services']
 	];
 	$posts = get_posts($args);
     $res = [];            
@@ -334,16 +336,17 @@ function get_category_posts() {
 		$arr['title'] = get_the_title($postId);
 		$arr['leading_paragraph'] = get_field('leading_paragraph', $postId);
 		$arr['date'] = $post->post_modified_gmt;
-		$postCategories = get_the_category($postId);
+        $postCategories = get_the_category($postId);
+        $postTags = get_the_terms($postId, 'post_tag');
 		foreach($postCategories as $postCategory) {
 			if ($postCategory->parent == 3) {
 				$arr['region_slug'] = $postCategory->slug;
 				$arr['region_name'] = $postCategory->cat_name;
 			}
-			if ($postCategory->parent == 9) {
-				$arr['service_slug'] = $postCategory->slug;
-				$arr['service_name'] = $postCategory->cat_name;
-			}
+        }
+        foreach($postTags as $postTag) {
+            $arr['service_slug'] = $postTag->slug;
+            $arr['service_name'] = $postTag->name;
 		}	
 		$res[] = $arr;
 	}
