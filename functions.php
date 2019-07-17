@@ -377,7 +377,7 @@ function df_eu_phone_format( $phone_formats ) {
     $phone_formats['eu'] = array(
         'label'       => 'EU',
         'mask'        => false,
-        'regex'       => '^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$',
+        'regex'       => '^(\+[0-9]{1,3}|0)[0-9]{3}( ){0,1}[0-9]{7,8}\b',
         'instruction' => false,
     );
  
