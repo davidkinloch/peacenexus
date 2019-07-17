@@ -373,7 +373,7 @@ remove_action('template_redirect', 'redirect_canonical');
 // Add additional Phone format for Gravity Forms
 add_filter( 'gform_phone_formats', 'df_phone_format' );
 
-function df_eu_phone_format( $phone_formats ) {
+function df_phone_format( $phone_formats ) {
     $phone_formats['world'] = array(
         'label'       => 'World',
         'mask'        => false,
