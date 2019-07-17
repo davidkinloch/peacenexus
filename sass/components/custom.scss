@@ -1312,7 +1312,7 @@ nav {
   color: #000;
 }
 
-.gform_wrapper input.button {
+.gform_wrapper .gform_page_footer input.button {
   border: 2px solid $primary-color;
   border-radius: 0;
   background-color: transparent;
@@ -1333,7 +1333,8 @@ nav {
     color: #FFF;
   }
 }
-.gform_wrapper input[type=submit].button {
+
+.gform_wrapper .gform_page_footer  input[type=submit].button {
   border: 2px solid $primary-color;
   background-color: $primary-color;
   color: #fff;
