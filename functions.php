@@ -371,13 +371,13 @@ add_action('rest_api_init', function () {
 remove_action('template_redirect', 'redirect_canonical');
 
 // Add additional Phone format for Gravity Forms
-add_filter( 'gform_phone_formats', 'df_eu_phone_format' );
+add_filter( 'gform_phone_formats', 'df_phone_format' );
 
 function df_eu_phone_format( $phone_formats ) {
-    $phone_formats['eu'] = array(
-        'label'       => 'EU',
+    $phone_formats['world'] = array(
+        'label'       => 'World',
         'mask'        => false,
-        'regex'       => '^(\+[0-9]{1,3}|0)[0-9]{3}( ){0,1}[0-9]{7,8}\b',
+        'regex'       => '(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})',
         'instruction' => false,
     );
  
