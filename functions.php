@@ -374,10 +374,10 @@ remove_action('template_redirect', 'redirect_canonical');
 add_filter( 'gform_phone_formats', 'df_phone_format' );
 
 function df_phone_format( $phone_formats ) {
-    $phone_formats['world'] = array(
-        'label'       => 'World',
+    $phone_formats['any'] = array(
+        'label'       => 'All Phone Formats',
         'mask'        => false,
-        'regex'       => '(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})',
+        'regex'       => '([+(\d]{1})(([\d+() -.]){5,16})([+(\d]{1})',
         'instruction' => false,
     );
  
