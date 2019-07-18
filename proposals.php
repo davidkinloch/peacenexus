@@ -140,37 +140,37 @@ Template Name: Calls For Proposal
                   <h5>Organisational Development</h5>
                   <div class="cta-block">
                     <?php if($og['cta_link']) :?>
-                      <a href="<?php echo $og['cta_link']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $og['cta_label']; ?></a>
+                      <a href="<?php echo $og['cta_link']; ?>" class="btn btn-transparent waves-effect waves-light" target="_blank"><?php echo $og['cta_label']; ?></a>
                     <?php endif; ?>
                     <?php if($og['cta_link_2']) :?>   
                       <a href="<?php echo $og['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light" target="_blank"><?php echo $og['cta_label_2']; ?></a>
                     <?php endif; ?>
                     <?php if($og['cta_link_3']) :?>   
-                      <a href="<?php echo $og['cta_link_3']; ?>" class="btn  waves-effect waves-light" target="_blank"><?php echo $og['cta_label_3']; ?></a>
+                      <a href="<?php echo $og['cta_link_3']; ?>" class="btn  waves-effect waves-light"><?php echo $og['cta_label_3']; ?></a>
                     <?php endif; ?>
                   </div>
                   <h5>Conflict Sensitivity</h5>
                   <div class="cta-block">
                     <?php if($cs['cta_link']) :?> 
-                      <a href="<?php echo $cs['cta_link']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $cs['cta_label']; ?></a>
+                      <a href="<?php echo $cs['cta_link']; ?>" class="btn btn-transparent waves-effect waves-light" target="_blank"><?php echo $cs['cta_label']; ?></a>
                     <?php endif; ?>
                     <?php if($cs['cta_link_2']) :?> 
                       <a href="<?php echo $cs['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light" target="_blank"><?php echo $cs['cta_label_2']; ?></a>
                     <?php endif; ?>
                     <?php if($cs['cta_link_3']) :?> 
-                      <a href="<?php echo $cs['cta_link_3']; ?>" class="btn  waves-effect waves-light" target="_blank"><?php echo $cs['cta_label_3']; ?></a>
+                      <a href="<?php echo $cs['cta_link_3']; ?>" class="btn  waves-effect waves-light"><?php echo $cs['cta_label_3']; ?></a>
                     <?php endif; ?>
                   </div>
                   <h5>Inclusive Dialogue with Business</h5>
                   <div class="cta-block">
                     <?php if($id['cta_link']) :?> 
-                      <a href="<?php echo $id['cta_link']; ?>" class="btn btn-transparent waves-effect waves-light"><?php echo $id['cta_label']; ?></a>
+                      <a href="<?php echo $id['cta_link']; ?>" class="btn btn-transparent waves-effect waves-light" target="_blank"><?php echo $id['cta_label']; ?></a>
                     <?php endif; ?>
                     <?php if($id['cta_link_2']) :?> 
                       <a href="<?php echo $id['cta_link_2']; ?>" class="btn btn-transparent waves-effect waves-light" target="_blank"><?php echo $id['cta_label_2']; ?></a>
                     <?php endif; ?>
                     <?php if($id['cta_link_3']) :?> 
-                      <a href="<?php echo $id['cta_link_3']; ?>" class="btn  waves-effect waves-light" target="_blank"><?php echo $id['cta_label_3']; ?></a>
+                      <a href="<?php echo $id['cta_link_3']; ?>" class="btn  waves-effect waves-light"><?php echo $id['cta_label_3']; ?></a>
                     <?php endif; ?>
                   </div>
               </div>
