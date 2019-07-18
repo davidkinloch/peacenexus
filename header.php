@@ -45,7 +45,7 @@
                       <select>
                         <option value="https://peacenexus.org" selected="">EN</option>
                           <option value="https://fr.peacenexus.org">FR</option>
-                          <option value="https://ru.peacenexus.org">RU</option>
+                          <!-- <option value="https://ru.peacenexus.org">RU</option> -->
                       </select>
                     </div>
                   </form>
