@@ -935,7 +935,8 @@ nav {
   }
   .btn {
     margin-top: 12px;
-    &:first-child {
+    &:first-child,
+    &:nth-child(1) {
       margin-right: 12px;
     }
     &-flat {
