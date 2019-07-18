@@ -377,7 +377,7 @@ function df_phone_format( $phone_formats ) {
     $phone_formats['any'] = array(
         'label'       => 'All Phones',
         'mask'        => false,
-        'regex'       => '([+(\d]{1})(([\d+() -.]){5,16})([+(\d]{1})',
+        'regex'       => '/([+(\d]{1})(([\d+() -.]){5,16})([+(\d]{1})/',
         'instruction' => false,
     );
  
