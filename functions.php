@@ -371,7 +371,7 @@ add_action('rest_api_init', function () {
 remove_action('template_redirect', 'redirect_canonical');
 
 // Add additional Phone format for Gravity Forms
-add_filter( 'gform_phone_formats_7', 'df_phone_format' );
+add_filter( 'gform_phone_formats', 'df_phone_format' );
 
 function df_phone_format( $phone_formats ) {
     $phone_formats['any'] = array(
