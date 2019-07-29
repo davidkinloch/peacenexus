@@ -1,5 +1,7 @@
 <?php
 
+add_filter( 'auto_update_plugin', '__return_true' );
+
 add_action( 'wp_enqueue_scripts', function(){
         wp_deregister_script('jquery');  
         if (is_admin()) return; // don't dequeue on the backend
