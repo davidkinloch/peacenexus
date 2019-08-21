@@ -25,6 +25,8 @@
 
      var rellax = new Rellax('.rellax');
 
+     var rellaxContained = new Rellax('.rellax-contained');
+
     $('.lang-switch select').change(function(){
         var url = $(this).val();
         window.location = url;
