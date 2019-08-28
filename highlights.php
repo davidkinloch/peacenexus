@@ -155,10 +155,15 @@ $services = get_terms( 'post_tag', array('orderby' => 'name' ));
           regions: regions,
           services: services,
           sort: sort
-        }
+        },
+        beforeSend : function(xhr){
+				  $('.filter').find('a:not(.btn-filter-selected)').toggleClass('disabled');
+			}
       })
       .done(function(res) {
         //console.log(res);
+        $('.filter').find('a:not(.btn-filter-selected)').toggleClass('disabled');
+
         if (res.length == 0) {
           $("#no-posts-containter").show();
         } else {
