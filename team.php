@@ -42,7 +42,7 @@ while( have_rows('team_section') ): the_row();
             ?>
             
               <div class="row card" id="<?php $page_link = sanitize_title_for_query( $name ); echo str_replace(' ', '', $page_link); ?>">
-                <div class="card-image col s12 l4 waves-effect waves-block waves-light">
+                <div class="card-image col s12 l4">
                   <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" class="responsive-img rollover__image">
                 </div>
                 <div class="col s12 l8">
