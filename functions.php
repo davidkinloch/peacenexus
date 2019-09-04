@@ -15,6 +15,13 @@ add_action( 'wp_enqueue_scripts', function(){
         wp_enqueue_script( 'production.min', get_template_directory_uri() . '/js/build/production.min.js', array(), '1.0.0', true );
 });
 
+function wrap_embed_with_div($html, $url, $attr) {
+
+     return '<div class="video-container">' . $html . '</div>';
+
+}
+
+ add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
 
 // menu
 function wp_nav_menu_no_ul()
