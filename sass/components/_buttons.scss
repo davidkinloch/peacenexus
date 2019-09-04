@@ -33,6 +33,7 @@
   pointer-events: none;
   background-color: $button-disabled-background !important;
   box-shadow: none;
+  border-color: $button-disabled-color !important;
   color: $button-disabled-color !important;
   cursor: default;
   &:hover {

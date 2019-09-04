@@ -1134,6 +1134,22 @@ nav {
   }
 }
 
+// Highlights page Rellax
+.rellax-contained-wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rellax-contained {
+  position: absolute;
+  width: 100%;
+  height: 180%;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .searchresults {
   margin-top: 20px;
