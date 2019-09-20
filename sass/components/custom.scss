@@ -1238,6 +1238,34 @@ nav {
   margin-top: 0;
 }
 
+.wp-block-embed {
+  margin: 0;
+
+  &.alignleft,
+  &.alignright {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  @media #{$large-and-up} {
+    &.alignleft,
+    &.alignright {
+      width: 50% !important;
+      max-width: 100% !important;
+    }
+
+    &.alignleft {
+      float: left;
+      margin-right: 2rem;
+    }
+
+    &.alignright {
+      float: right;
+      margin-left: 2rem;
+    }
+  }
+}
+
 .wp-block-separator {
   margin: 20px auto;
 }
