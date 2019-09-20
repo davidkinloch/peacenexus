@@ -15,13 +15,25 @@ add_action( 'wp_enqueue_scripts', function(){
         wp_enqueue_script( 'production.min', get_template_directory_uri() . '/js/build/production.min.js', array(), '1.0.0', true );
 });
 
-function wrap_embed_with_div($html, $url, $attr) {
+/**
+ * Enable responsive embeds
+ * @link https://wordpress.org/gutenberg/handbook/designers-developers/developers/themes/theme-support/#responsive-embedded-content
+ */
+add_theme_support( 'responsive-embeds' );
 
-     return '<div class="video-container">' . $html . '</div>';
+/**
+ * Enable responsive embeds
+ * @link https://wordpress.org/gutenberg/handbook/designers-developers/developers/themes/theme-support/#responsive-embedded-content
+ */
+add_theme_support( 'align-wide' );
 
-}
+// function wrap_embed_with_div($html, $url, $attr) {
 
- add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
+//      return '<div class="video-container">' . $html . '</div>';
+
+// }
+
+//  add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
 
 // menu
 function wp_nav_menu_no_ul()
@@ -157,13 +169,14 @@ function service_post_type() {
     
     // Register post type
     register_post_type('services' , array(
-         'labels'              => $labels,
+        'labels'              => $labels,
         'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
         'hierarchical'        => true,
         'public'              => true,
         'show_ui'             => true,
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
+        'show_in_rest' => true,
         'menu_position'       => 6,
         'menu_icon'           => 'dashicons-format-gallery',
         'can_export'          => true,
