@@ -623,10 +623,11 @@ td, th{
 
 
 
-// Responsive Videos
-.video-container {
+// Responsive Videos on Regions Pages
+.regions-template-default .video-container {
     position: relative;
     padding-bottom: 56.25%;
+    margin-bottom: 2rem;
     height: 0;
     overflow: hidden;
 

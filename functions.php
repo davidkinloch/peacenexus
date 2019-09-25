@@ -16,24 +16,27 @@ add_action( 'wp_enqueue_scripts', function(){
 });
 
 /**
- * Enable responsive embeds
+ * Enable responsive embeds Gutenberg
  * @link https://wordpress.org/gutenberg/handbook/designers-developers/developers/themes/theme-support/#responsive-embedded-content
  */
 add_theme_support( 'responsive-embeds' );
 
 /**
- * Enable responsive embeds
+ * Enable responsive embeds Gutenberg
  * @link https://wordpress.org/gutenberg/handbook/designers-developers/developers/themes/theme-support/#responsive-embedded-content
  */
 add_theme_support( 'align-wide' );
 
-// function wrap_embed_with_div($html, $url, $attr) {
+/**
+ * Enable responsive embeds ACF (Regions Page)
+ */
+function wrap_embed_with_div($html, $url, $attr) {
 
-//      return '<div class="video-container">' . $html . '</div>';
+     return '<div class="video-container">' . $html . '</div>';
 
-// }
+}
 
-//  add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
+ add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
 
 // menu
 function wp_nav_menu_no_ul()
