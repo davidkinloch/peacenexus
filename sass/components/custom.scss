@@ -1256,12 +1256,12 @@ nav {
 
     &.alignleft {
       float: left;
-      margin-right: 2rem;
+      margin-right: 2rem !important;
     }
 
     &.alignright {
       float: right;
-      margin-left: 2rem;
+      margin-left: 2rem !important;
     }
   }
 }
