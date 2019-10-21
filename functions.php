@@ -60,16 +60,6 @@ function fall_back_menu(){
     return;
 }
 
-// Fix Regions Menu
-function add_nav_menu_classes($classes, $item){
-    if( is_post_type_archive('regions') && ($item->title == "Regions" ) ){
-       $classes[] = 'current-menu-item';
-    }
-    return $classes;
- }
- add_filter('nav_menu_css_class' , 'add_nav_menu_classes' , 10 , 2);
-
-
 //add SVG to allowed file uploads
 function add_file_types_to_uploads($file_types){
 
