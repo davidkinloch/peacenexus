@@ -57,6 +57,14 @@ function fall_back_menu(){
     return;
 }
 
+// Fix Regions Menu
+function add_nav_menu_classes($classes, $item){
+    if( is_post_type_archive('regions') && ($item->title == "Regions" ) ){
+       $classes[] = 'current-menu-item';
+    }
+    return $classes;
+ }
+ add_filter('nav_menu_css_class' , 'add_nav_menu_classes' , 10 , 2);
 
 
 //add SVG to allowed file uploads
@@ -133,15 +141,15 @@ function region_post_type() {
         'show_ui'             => true,
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
+        'show_in_rest'        => true,
         'menu_position'       => 5,
         'menu_icon'           => 'dashicons-admin-site',
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
-        'rewrite'               => true,
+        'rewrite'              => true,
         'taxonomies'          => array( 'category', 'post_tag' )
-
     ) );
 }
 add_action( 'init', 'region_post_type', 0 );
