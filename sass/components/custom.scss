@@ -1239,7 +1239,7 @@ nav {
 }
 
 .wp-block-embed {
-  margin: 0;
+  margin: 0 0 2rem 0 !important;
 
   &.alignleft,
   &.alignright {
@@ -1256,12 +1256,12 @@ nav {
 
     &.alignleft {
       float: left;
-      margin-right: 2rem;
+      margin-right: 2rem !important;
     }
 
     &.alignright {
       float: right;
-      margin-left: 2rem;
+      margin-left: 2rem !important;
     }
   }
 }
